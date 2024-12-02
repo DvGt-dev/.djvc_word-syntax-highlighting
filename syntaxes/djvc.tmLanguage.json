@@ -1,0 +1,20 @@
+{
+	"scopeName": "source.djvc",
+	"patterns": [
+		{
+			"name": "punctuation.period.djvc",
+			"match": "\\."
+		},
+		{
+			"name": "punctuation.comma.djvc",
+			"match": ","
+		},
+		{
+			"name": "punctuation.parenthesis.djvc",
+			"match": "[()]"
+		}
+	],
+	"repository": {},
+	"fileTypes": ["djvc"],
+	"name": "DJVC"
+}

@@ -1,0 +1,25 @@
+{
+	"name": "DJVC Theme",
+	"type": "dark",
+	"colors": {},
+	"tokenColors": [
+		{
+			"scope": "punctuation.period.djvc",
+			"settings": {
+				"foreground": "#FF0000"
+			}
+		},
+		{
+			"scope": "punctuation.comma.djvc",
+			"settings": {
+				"foreground": "#FFFF00"
+			}
+		},
+		{
+			"scope": "punctuation.parenthesis.djvc",
+			"settings": {
+				"foreground": "#00FF00"
+			}
+		}
+	]
+}
