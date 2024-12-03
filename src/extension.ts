@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand("djvc.helloWorld", () => {
     // The code you place here will be executed every time your command is executed
     // Display a message box to the user
-    vscode.window.showInformationMessage("Hello World from djvcext!");
+    vscode.window.showInformationMessage("Hello World from .djvc ext!");
   });
 
   context.subscriptions.push(disposable);
@@ -50,8 +50,6 @@ export function activate(context: vscode.ExtensionContext) {
         action: { indentAction: vscode.IndentAction.None, appendText: "* " },
       },
     ],
-    // Enable word wrapping
-    wordWrap: "on",
   });
 }
 
