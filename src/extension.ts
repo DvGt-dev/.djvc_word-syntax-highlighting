@@ -50,6 +50,8 @@ export function activate(context: vscode.ExtensionContext) {
         action: { indentAction: vscode.IndentAction.None, appendText: "* " },
       },
     ],
+    // Enable word wrapping
+    wordWrap: "on",
   });
 }
 

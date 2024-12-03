@@ -47,7 +47,28 @@
         "uiTheme": "vs-dark",
         "path": "./themes/DJVC-color-theme.json"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "DJVC Configuration",
+      "properties": {
+        "editor.wordWrap": {
+          "type": "string",
+          "default": "on",
+          "description": "Controls how lines should wrap."
+        },
+        "editor.wordWrapColumn": {
+          "type": "integer",
+          "default": 80,
+          "description": "Controls the wrapping column of the editor."
+        },
+        "editor.wrappingIndent": {
+          "type": "string",
+          "default": "same",
+          "description": "Controls the indentation of wrapped lines."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
