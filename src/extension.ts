@@ -58,6 +58,9 @@ export function activate(context: vscode.ExtensionContext) {
     new DJVCSemanticTokensProvider(),
     legend
   );
+
+  // Remove the color provider registration |dv_attention
+  vscode.languages.registerColorProvider("djvc", new DJVCColorProvider());
 }
 
 // Define the legend for the semantic tokens
@@ -124,3 +127,56 @@ class DJVCSemanticTokensProvider
 
 // This method is called when your extension is deactivated
 export function deactivate() {}
+
+// Remove the color provider implementation
+class DJVCColorProvider implements vscode.DocumentColorProvider {
+  provideDocumentColors(
+    document: vscode.TextDocument
+  ): vscode.ProviderResult<vscode.ColorInformation[]> {
+    const colors: vscode.ColorInformation[] = [];
+    const text = document.getText();
+
+    // Add logic to identify and classify colors based on the text
+    // For example:
+    const regex = /(\.|\#|\,|\:|\d)/g;
+    let match;
+    while ((match = regex.exec(text))) {
+      const start = match.index;
+      const length = match[0].length;
+      let color: vscode.Color = new vscode.Color(0, 0, 0, 1); // Default color (black)
+
+      switch (match[0]) {
+        case ".":
+          color = new vscode.Color(1, 0, 0, 1); // Red
+          break;
+        case ",":
+          color = new vscode.Color(0, 1, 0, 1); // Green
+          break;
+        case ":":
+          color = new vscode.Color(0.85, 0.31, 1, 1); // Purple
+          break;
+        case "#":
+          color = new vscode.Color(0.7, 0.01, 1, 1); // Magenta
+          break;
+        case /\d/.test(match[0]) ? match[0] : null:
+          color = new vscode.Color(0, 0.73, 0.92, 1); // Cyan
+          break;
+      }
+
+      const range = new vscode.Range(
+        document.positionAt(start),
+        document.positionAt(start + length)
+      );
+      colors.push(new vscode.ColorInformation(range, color));
+    }
+
+    return colors;
+  }
+
+  provideColorPresentations(
+    color: vscode.Color,
+    context: { document: vscode.TextDocument; range: vscode.Range }
+  ): vscode.ProviderResult<vscode.ColorPresentation[]> {
+    return [];
+  }
+}
