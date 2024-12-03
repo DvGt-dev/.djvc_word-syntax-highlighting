@@ -51,6 +51,75 @@ export function activate(context: vscode.ExtensionContext) {
       },
     ],
   });
+
+  // Register the DJVC syntax highlighting
+  vscode.languages.registerDocumentSemanticTokensProvider(
+    { language: "djvc" },
+    new DJVCSemanticTokensProvider(),
+    legend
+  );
+}
+
+// Define the legend for the semantic tokens
+const legend = new vscode.SemanticTokensLegend(
+  [
+    "punctuation.period",
+    "punctuation.comma",
+    "punctuation.2pts",
+    "punctuation.apostrph",
+    "punctuation.parenthesis",
+  ],
+  []
+);
+
+// Implement the semantic tokens provider
+class DJVCSemanticTokensProvider
+  implements vscode.DocumentSemanticTokensProvider
+{
+  provideDocumentSemanticTokens(
+    document: vscode.TextDocument
+  ): vscode.ProviderResult<vscode.SemanticTokens> {
+    const tokensBuilder = new vscode.SemanticTokensBuilder(legend);
+    const text = document.getText();
+
+    // Add logic to identify and classify tokens based on the text
+    // For example:
+    const regex = /(\.|\#|\,|\:|\d)/g;
+    let match;
+    while ((match = regex.exec(text))) {
+      const start = match.index;
+      const length = match[0].length;
+      let tokenType = "";
+
+      switch (match[0]) {
+        case ".":
+          tokenType = "punctuation.period";
+          break;
+        case ",":
+          tokenType = "punctuation.comma";
+          break;
+        case ":":
+          tokenType = "punctuation.2pts";
+          break;
+        case "#":
+          tokenType = "punctuation.apostrph";
+          break;
+        case /\d/.test(match[0]) ? match[0] : null:
+          tokenType = "punctuation.parenthesis";
+          break;
+      }
+
+      tokensBuilder.push(
+        document.positionAt(start).line,
+        document.positionAt(start).character,
+        length,
+        legend.tokenTypes.indexOf(tokenType),
+        0
+      );
+    }
+
+    return tokensBuilder.build();
+  }
 }
 
 // This method is called when your extension is deactivated
