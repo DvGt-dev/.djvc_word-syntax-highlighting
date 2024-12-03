@@ -1,24 +1,28 @@
 {
-	"scopeName": "source.djvc",
-	"patterns": [
-		{
-			"name": "punctuation.period.djvc",
-			"match": "\\."
-		},
-		{
-			"name": "punctuation.comma.djvc",
-			"match": ",;:"
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "[()]"
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "0 1 2 3 4 5 6 7 8 9"
-		}
-	],
-	"repository": {},
-	"fileTypes": ["djvc"],
-	"name": "DJVC"
+  "scopeName": "source.djvc",
+  "patterns": [
+    {
+      "name": "punctuation.period.djvc",
+      "match": "\\."
+    },
+    {
+      "name": "punctuation.comma.djvc",
+      "match": ","
+    },
+    {
+      "name": "punctuation.2pts.djvc",
+      "match": ":"
+    },
+    {
+      "name": "punctuation.apostrph.djvc",
+      "match": "\\#"
+    },
+    {
+      "name": "punctuation.parenthesis.djvc",
+      "match": "\\d"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["djvc"],
+  "name": "DJVC"
 }

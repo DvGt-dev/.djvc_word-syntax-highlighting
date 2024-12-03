@@ -1,25 +1,37 @@
 {
-	"name": "DJVC Theme",
-	"type": "dark",
-	"colors": {},
-	"tokenColors": [
-		{
-			"scope": "punctuation.period.djvc",
-			"settings": {
-				"foreground": "#FF0000"
-			}
-		},
-		{
-			"scope": "punctuation.comma.djvc",
-			"settings": {
-				"foreground": "#FFFF00"
-			}
-		},
-		{
-			"scope": "punctuation.parenthesis.djvc",
-			"settings": {
-				"foreground": "#00FF00"
-			}
-		}
-	]
+  "name": "DJVC Theme",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "scope": "punctuation.2pts.djvc",
+      "settings": {
+        "foreground": "#d94eff"
+      }
+    },
+    {
+      "scope": "punctuation.apostrph.djvc",
+      "settings": {
+        "foreground": "#ff01d0"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#00b9ec"
+      }
+    }
+  ]
 }

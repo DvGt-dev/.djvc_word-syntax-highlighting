@@ -1,63 +1,71 @@
 {
-	"name": "djvc-syntax-highlighting",
-	"displayName": "DJVC Syntax Highlighting",
-	"description": "Extension pour la coloration syntaxique des fichiers DJVC",
-	"version": "0.0.1",
-	"publisher": "votre-nom",
-	"engines": {
-		"vscode": "^1.50.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"activationEvents": [
-		"onLanguage:djvc"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "djvc.helloWorld",
-				"title": "Hello World"
-			}
-		],
-		"languages": [
-			{
-				"id": "djvc",
-				"aliases": [
-					"DJVC",
-					"djvc"
-				],
-				"extensions": [
-					".djvc"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "djvc",
-				"scopeName": "source.djvc",
-				"path": "./syntaxes/djvc.tmLanguage.json"
-			}
-		],
-		"themes": [
-			{
-				"label": "DJVC Theme",
-				"uiTheme": "vs-dark",
-				"path": "./themes/DJVC-color-theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"typescript": "^4.0.3",
-		"vscode": "^1.1.37",
-		"vscode-test": "^1.4.0"
-	}
+  "name": "djvc-syntax-highlighting",
+  "displayName": "DJVC Syntax Highlighting",
+  "description": "Extension pour la coloration syntaxique des fichiers DJVC",
+  "version": "0.0.1",
+  "publisher": "djvc-Extention-4txt-by-Djontso-Victorien",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:djvc"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "djvc.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "djvc",
+        "aliases": [
+          "DJVC",
+          "djvc"
+        ],
+        "extensions": [
+          ".djvc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "djvc",
+        "scopeName": "source.djvc",
+        "path": "./syntaxes/djvc.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "DJVC Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/DJVC-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DvGt-dev/.djvc_word-syntax-highlighting"
+  },
+  "bugs": {
+    "url": "https://github.com/DvGt-dev/.djvc_word-syntax-highlighting/issues"
+  },
+  "license": "MIT"
 }

@@ -1,71 +1,40 @@
-# djvc README
+# Extension DJVC - Coloration Syntaxique
 
-This is the README for your extension "djvc". After writing up a brief description, we recommend including the following sections.
+Cette extension VS Code fournit une coloration syntaxique personnalisée pour les fichiers DJVC.
 
-## Features
+## Fonctionnalités
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Coloration syntaxique pour les fichiers DJVC
+- Colore les marque dépontuations de simple texte [appel a contribution de la communauté pour ajouter d autres caractères spéciaux ]
+- Amélioration de la lisibilité du texte a lire
+-
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Ouvrez VS Code
+2. Accédez au panneau des extensions (Ctrl+Shift+X)
+3. Recherchez "DJVC"
+4. Cliquez sur Installer
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Utilisation
 
-## Requirements
+L'extension s'active automatiquement pour les fichiers avec l'extension `.djvc`.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Configuration
 
-## Extension Settings
+Aucune configuration supplémentaire n'est nécessaire.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Notes de version
 
-For example:
+### 0.0.1
 
-This extension contributes the following settings:
+- Version initiale
+- Support basique de la coloration syntaxique
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Contact
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Créé par Djontso Victorien
