@@ -38,6 +38,18 @@ export function activate(context: vscode.ExtensionContext) {
       { open: '"', close: '"' },
       { open: "'", close: "'" },
     ],
+    wordPattern:
+      /(-?\d*\.\d\w*)|([^\`\~\!\@\#\$\%\^\&\*\(\)\=\+\[\{\]\}\\\|\;\:\'\"\,\<\>\/\?\s]+)/g,
+    onEnterRules: [
+      {
+        beforeText: /^(\t|(\ \ ))*\ \*\ .*/,
+        action: { indentAction: vscode.IndentAction.None, appendText: "* " },
+      },
+      {
+        beforeText: /^(\t|(\ \ ))*\ \*[^/]*\ .*/,
+        action: { indentAction: vscode.IndentAction.None, appendText: "* " },
+      },
+    ],
   });
 }
 
