@@ -1,4 +1,4 @@
-# Extension DJVC - Coloration Syntaxique
+# Extension DJVC - Coloration Syntaxique {{VSCOSE My 1st extention 😊}}
 
 Cette extension VS Code fournit une coloration syntaxique personnalisée pour les fichiers DJVC.
 
