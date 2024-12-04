@@ -2,7 +2,7 @@
   "name": "DJVC Theme",
   "type": "dark",
   "colors": {
-    "editor.foreground": "#FFFFFF"
+    "editor.foreground": "#A9A9A9" // Set text color to dark grey
   },
   "tokenColors": [
     {
@@ -90,6 +90,18 @@
       "scope": "markup.underline.link",
       "settings": {
         "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "scope": ["string.quoted.single.djvc", "string.quoted.double.djvc"],
+      "settings": {
+        "foreground": "#FFFF00" // Color for text between quotation marks
+      }
+    },
+    {
+      "scope": "meta.parentheses.djvc",
+      "settings": {
+        "foreground": "#FFA500" // Color for text between parentheses
       }
     }
   ]

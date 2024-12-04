@@ -52,6 +52,38 @@
         "1": { "name": "punctuation.definition.heading.djvc" },
         "2": { "name": "entity.name.section.djvc" }
       }
+    },
+    {
+      "name": "string.quoted.double.djvc",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.djvc",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.djvc",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.djvc",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "meta.parentheses.djvc",
+      "begin": "\\(",
+      "end": "\\)",
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
     }
   ],
   "repository": {},
