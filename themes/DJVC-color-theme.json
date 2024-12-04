@@ -2,12 +2,7 @@
   "name": "DJVC Theme",
   "type": "dark",
   "colors": {
-    "editor.foreground": "#FFFFFF",
-    "editorMarkdownHeading.foreground": "#569CD6",
-    "editorMarkdownBold.foreground": "#569CD6",
-    "editorMarkdownItalic.foreground": "#CE9178",
-    "editorMarkdownListMarker.foreground": "#6796E6",
-    "editorMarkdownLink.foreground": "#4EC9B0"
+    "editor.foreground": "#FFFFFF"
   },
   "tokenColors": [
     {
@@ -41,34 +36,40 @@
       }
     },
     {
-      "scope": "markup.heading.djvc",
+      "scope": [
+        "markup.heading",
+        "markup.heading.markdown",
+        "markup.heading.setext.1.markdown",
+        "markup.heading.setext.2.markdown",
+        "markup.heading.atx.markdown"
+      ],
       "settings": {
         "foreground": "#569CD6",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "markup.bold.djvc",
+      "scope": "markup.bold",
       "settings": {
         "foreground": "#569CD6",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "markup.italic.djvc",
+      "scope": "markup.italic",
       "settings": {
         "foreground": "#CE9178",
         "fontStyle": "italic"
       }
     },
     {
-      "scope": "markup.list.djvc",
+      "scope": "markup.list",
       "settings": {
         "foreground": "#6796E6"
       }
     },
     {
-      "scope": "markup.link.djvc",
+      "scope": "markup.underline.link",
       "settings": {
         "foreground": "#4EC9B0"
       }

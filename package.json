@@ -5,13 +5,10 @@
   "version": "0.0.1",
   "publisher": "djvc-Extention-4txt-by-Djontso-Victorien",
   "engines": {
-    "vscode": "^1.50.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Programming Languages"
-  ],
-  "activationEvents": [
-    "onLanguage:djvc"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -48,44 +45,108 @@
         "path": "./themes/DJVC-color-theme.json"
       }
     ],
-    "semanticTokenTypes": {
-      "punctuation.period.djvc": {
+    "semanticTokenTypes": [
+      {
+        "id": "punctuation_period",
         "description": "A period in DJVC"
       },
-      "punctuation.comma.djvc": {
+      {
+        "id": "punctuation_comma",
         "description": "A comma in DJVC"
       },
-      "punctuation.2pts.djvc": {
+      {
+        "id": "punctuation_colon",
         "description": "Two points in DJVC"
       },
-      "punctuation.apostrph.djvc": {
-        "description": "An apostrophe in DJVC"
+      {
+        "id": "punctuation_hash",
+        "description": "A hash in DJVC"
       },
-      "punctuation.parenthesis.djvc": {
-        "description": "A parenthesis in DJVC"
+      {
+        "id": "punctuation_digit",
+        "description": "A digit in DJVC"
       },
-      "markup.heading.djvc": {
+      {
+        "id": "markup_heading",
         "description": "A heading in Markdown"
       },
-      "markup.bold.djvc": {
+      {
+        "id": "markup_bold",
         "description": "Bold text in Markdown"
       },
-      "markup.italic.djvc": {
+      {
+        "id": "markup_italic",
         "description": "Italic text in Markdown"
       },
-      "markup.list.djvc": {
+      {
+        "id": "markup_list",
         "description": "List item in Markdown"
       },
-      "markup.link.djvc": {
+      {
+        "id": "markup_link",
         "description": "Link in Markdown"
       }
-    },
-    "semanticTokenModifiers": {
-      "declaration": {
+    ],
+    "semanticTokenModifiers": [
+      {
+        "id": "declaration",
         "description": "Style declaration"
       },
-      "documentation": {
+      {
+        "id": "documentation",
         "description": "Documentation text"
+      }
+    ],
+    "configurationDefaults": {
+      "[djvc]": {
+        "editor.semanticTokenColorCustomizations": {
+          "[Deep Dark Pro]": {
+            "enabled": true,
+            "rules": {
+              "punctuation_period": "#FF0000",
+              "punctuation_comma": "#00FF00",
+              "punctuation_colon": "#d94eff",
+              "punctuation_hash": "#b301ff",
+              "punctuation_digit": "#00b9ec",
+              "markup_heading": "#569CD6",
+              "markup_bold": "#569CD6",
+              "markup_italic": "#CE9178",
+              "markup_list": "#6796E6",
+              "markup_link": "#4EC9B0"
+            }
+          }
+        }
+      },
+      "[*]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": [
+                "source.djvc"
+              ],
+              "settings": {
+                "foreground": "#FFFFFF"
+              }
+            },
+            {
+              "scope": [
+                "punctuation.period.djvc"
+              ],
+              "settings": {
+                "foreground": "#FF0000"
+              }
+            },
+            {
+              "scope": [
+                "punctuation.comma.djvc"
+              ],
+              "settings": {
+                "foreground": "#00FF00"
+              }
+            }
+          ]
+        }
       }
     }
   },

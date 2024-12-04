@@ -40,6 +40,18 @@
     {
       "name": "markup.link.djvc",
       "match": "\\[.*?\\]\\(.*?\\)"
+    },
+    {
+      "name": "entity.name.uppercase.djvc",
+      "match": "\\b[A-Z]+\\b"
+    },
+    {
+      "name": "markup.heading.title.djvc",
+      "match": "^(#{1,6})\\s+(.*)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.djvc" },
+        "2": { "name": "entity.name.section.djvc" }
+      }
     }
   ],
   "repository": {},

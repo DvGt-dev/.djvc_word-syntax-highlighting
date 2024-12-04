@@ -52,6 +52,19 @@ export function activate(context: vscode.ExtensionContext) {
     ],
   });
 
+  // Ajouter la gestion du thème actif
+  context.subscriptions.push(
+    vscode.workspace.onDidChangeConfiguration((event) => {
+      if (event.affectsConfiguration("workbench.colorTheme")) {
+        const config = vscode.workspace.getConfiguration();
+        const currentTheme = config.get("workbench.colorTheme");
+
+        // Recharger la coloration syntaxique
+        vscode.commands.executeCommand("workbench.action.reloadWindow");
+      }
+    })
+  );
+
   // Register the DJVC syntax highlighting
   vscode.languages.registerDocumentSemanticTokensProvider(
     { language: "djvc", scheme: "file" }, // Ajout de scheme: 'file'
@@ -61,6 +74,72 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Remove the color provider registration
   // vscode.languages.registerColorProvider("djvc", new DJVCColorProvider());
+
+  // Force l'application des couleurs customisées
+  const forceCustomColors = () => {
+    const config = vscode.workspace.getConfiguration();
+    config.update(
+      "editor.semanticTokenColorCustomizations",
+      {
+        "[*]": {
+          // Pour tous les thèmes
+          rules: {
+            punctuation_period: { foreground: "#FF0000", bold: true },
+            punctuation_comma: { foreground: "#00FF00", bold: true },
+            punctuation_colon: { foreground: "#d94eff" },
+            punctuation_hash: { foreground: "#b301ff" },
+            punctuation_digit: { foreground: "#00b9ec" },
+          },
+        },
+      },
+      vscode.ConfigurationTarget.Global
+    );
+
+    config.update(
+      "editor.tokenColorCustomizations",
+      {
+        "[*]": {
+          textMateRules: [
+            {
+              scope: ["source.djvc"],
+              settings: { foreground: "#FFFFFF" },
+            },
+            {
+              scope: ["punctuation.period.djvc"],
+              settings: { foreground: "#FF0000", fontStyle: "bold" },
+            },
+            {
+              scope: ["punctuation.comma.djvc"],
+              settings: { foreground: "#00FF00", fontStyle: "bold" },
+            },
+            {
+              scope: ["punctuation.2pts.djvc"],
+              settings: { foreground: "#d94eff", fontStyle: "bold" },
+            },
+            {
+              scope: ["punctuation.apostrph.djvc"],
+              settings: { foreground: "#b301ff", fontStyle: "bold" },
+            },
+            {
+              scope: ["punctuation.parenthesis.djvc"],
+              settings: { foreground: "#00b9ec", fontStyle: "bold" },
+            },
+          ],
+        },
+      },
+      vscode.ConfigurationTarget.Global
+    );
+  };
+
+  // Appliquer les couleurs au démarrage et lors des changements de thème
+  forceCustomColors();
+  context.subscriptions.push(
+    vscode.workspace.onDidChangeConfiguration((event) => {
+      if (event.affectsConfiguration("workbench.colorTheme")) {
+        forceCustomColors();
+      }
+    })
+  );
 }
 
 // Define the legend for the semantic tokens with modifiers
@@ -76,6 +155,10 @@ const legend = new vscode.SemanticTokensLegend(
     "italic",
     "list",
     "link",
+    "entity.name.uppercase",
+    "markup.heading.title",
+    "punctuation.definition.heading",
+    "entity.name.section",
   ],
   ["declaration", "documentation", "markdown"] // Ajout de modifiers
 );
@@ -113,16 +196,30 @@ class DJVCSemanticTokensProvider
       }
     });
 
+    // Ajout du pattern pour les majuscules
+    const uppercasePattern = /\b[A-Z]+\b/g;
+    let match;
+    while ((match = uppercasePattern.exec(text))) {
+      const startPos = document.positionAt(match.index);
+      tokensBuilder.push(
+        startPos.line,
+        startPos.character,
+        match[0].length,
+        legend.tokenTypes.indexOf("entity.name.uppercase"),
+        legend.tokenModifiers.indexOf("declaration")
+      );
+    }
+
     // Add logic to identify and classify tokens based on the text
     // For example:
     const regex = /(\.|\#|\,|\:|\d)/g;
-    let match;
-    while ((match = regex.exec(text))) {
-      const start = match.index;
-      const length = match[0].length;
+    let matchItem;
+    while ((matchItem = regex.exec(text))) {
+      const start = matchItem.index;
+      const length = matchItem[0].length;
       let tokenType = "";
 
-      switch (match[0]) {
+      switch (matchItem[0]) {
         case ".":
           tokenType = "punctuation.period.djvc";
           break;
@@ -135,7 +232,7 @@ class DJVCSemanticTokensProvider
         case "#":
           tokenType = "punctuation.apostrph.djvc";
           break;
-        case /\d/.test(match[0]) ? match[0] : null:
+        case /\d/.test(matchItem[0]) ? matchItem[0] : null:
           tokenType = "punctuation.parenthesis.djvc";
           break;
       }
