@@ -142,7 +142,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-// Define the legend for the semantic tokens with modifiers
+// Update the legend to include the correct token types
 const legend = new vscode.SemanticTokensLegend(
   [
     "punctuation.period.djvc",
@@ -150,17 +150,16 @@ const legend = new vscode.SemanticTokensLegend(
     "punctuation.2pts.djvc",
     "punctuation.apostrph.djvc",
     "punctuation.parenthesis.djvc",
-    "heading",
-    "bold",
-    "italic",
-    "list",
-    "link",
-    "entity.name.uppercase",
-    "markup.heading.title",
-    "punctuation.definition.heading",
-    "entity.name.section",
+    "markup.heading.djvc",
+    "markup.bold.djvc",
+    "markup.italic.djvc",
+    "markup.list.djvc",
+    "markup.link.djvc",
+    "entity.name.uppercase.djvc",
+    "punctuation.definition.heading.djvc",
+    "entity.name.section.djvc",
   ],
-  ["declaration", "documentation", "markdown"] // Ajout de modifiers
+  []
 );
 
 // Implement the semantic tokens provider
@@ -173,13 +172,13 @@ class DJVCSemanticTokensProvider
     const tokensBuilder = new vscode.SemanticTokensBuilder(legend);
     const text = document.getText();
 
-    // Ajout des patterns Markdown
+    // Update patterns to match custom scopes
     const patterns = [
-      { type: "heading", regex: /^#{1,6}\s.*$/gm },
-      { type: "bold", regex: /\*\*.*?\*\*/g },
-      { type: "italic", regex: /\*.*?\*/g },
-      { type: "list", regex: /^[\*\-\+]\s.*$/gm },
-      { type: "link", regex: /\[.*?\]\(.*?\)/g },
+      { type: "markup.heading.djvc", regex: /^#{1,6}\s.*$/gm },
+      { type: "markup.bold.djvc", regex: /\*\*.*?\*\*/g },
+      { type: "markup.italic.djvc", regex: /\*.*?\*/g },
+      { type: "markup.list.djvc", regex: /^[\*\-\+]\s.*$/gm },
+      { type: "markup.link.djvc", regex: /\[.*?\]\(.*?\)/g },
     ];
 
     patterns.forEach(({ type, regex }) => {
@@ -191,12 +190,12 @@ class DJVCSemanticTokensProvider
           startPos.character,
           match[0].length,
           legend.tokenTypes.indexOf(type),
-          legend.tokenModifiers.indexOf("markdown")
+          0 // No modifiers
         );
       }
     });
 
-    // Ajout du pattern pour les majuscules
+    // Add matching for uppercase words
     const uppercasePattern = /\b[A-Z]+\b/g;
     let match;
     while ((match = uppercasePattern.exec(text))) {
@@ -205,8 +204,8 @@ class DJVCSemanticTokensProvider
         startPos.line,
         startPos.character,
         match[0].length,
-        legend.tokenTypes.indexOf("entity.name.uppercase"),
-        legend.tokenModifiers.indexOf("declaration")
+        legend.tokenTypes.indexOf("entity.name.uppercase.djvc"),
+        0 // No modifiers
       );
     }
 

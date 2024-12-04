@@ -115,7 +115,9 @@
               "markup_link": "#4EC9B0"
             }
           }
-        }
+        },
+        "editor.semanticHighlighting.enabled": true,
+        "editor.wordWrap": "on"
       },
       "[*]": {
         "editor.semanticHighlighting.enabled": true,

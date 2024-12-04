@@ -17,7 +17,8 @@ GitHub Copilot: Pour créer une coloration syntaxique pour un nouveau langage da
    ```
 
    Suivez les instructions et choisissez "New Language Support".
-''
+   ''
+
 3. **Configurer l'extension**:
    Modifiez les fichiers générés pour ajouter la coloration syntaxique.
 
@@ -26,24 +27,24 @@ GitHub Copilot: Pour créer une coloration syntaxique pour un nouveau langage da
 
    ```json
    {
-   	"scopeName": "source.djvc",
-   	"patterns": [
-   		{
-   			"name": "punctuation.period.djvc",
-   			"match": "\\."
-   		},
-   		{
-   			"name": "punctuation.comma.djvc",
-   			"match": ","
-   		},
-   		{
-   			"name": "punctuation.parenthesis.djvc",
-   			"match": "[()]"
-   		}
-   	],
-   	"repository": {},
-   	"fileTypes": ["djvc"],
-   	"name": "DJVC"
+     "scopeName": "source.djvc",
+     "patterns": [
+       {
+         "name": "punctuation.period.djvc",
+         "match": "\\."
+       },
+       {
+         "name": "punctuation.comma.djvc",
+         "match": ","
+       },
+       {
+         "name": "punctuation.parenthesis.djvc",
+         "match": "[()]"
+       }
+     ],
+     "repository": {},
+     "fileTypes": ["djvc"],
+     "name": "DJVC"
    }
    ```
 
@@ -81,29 +82,29 @@ GitHub Copilot: Pour créer une coloration syntaxique pour un nouveau langage da
 
    ```json
    {
-   	"name": "DJVC Theme",
-   	"type": "dark",
-   	"colors": {},
-   	"tokenColors": [
-   		{
-   			"scope": "punctuation.period.djvc",
-   			"settings": {
-   				"foreground": "#FF0000"
-   			}
-   		},
-   		{
-   			"scope": "punctuation.comma.djvc",
-   			"settings": {
-   				"foreground": "#FFFF00"
-   			}
-   		},
-   		{
-   			"scope": "punctuation.parenthesis.djvc",
-   			"settings": {
-   				"foreground": "#00FF00"
-   			}
-   		}
-   	]
+     "name": "DJVC Theme",
+     "type": "dark",
+     "colors": {},
+     "tokenColors": [
+       {
+         "scope": "punctuation.period.djvc",
+         "settings": {
+           "foreground": "#FF0000"
+         }
+       },
+       {
+         "scope": "punctuation.comma.djvc",
+         "settings": {
+           "foreground": "#FFFF00"
+         }
+       },
+       {
+         "scope": "punctuation.parenthesis.djvc",
+         "settings": {
+           "foreground": "#00FF00"
+         }
+       }
+     ]
    }
    ```
 
@@ -124,29 +125,29 @@ GitHub Copilot: D'accord, simplifions cela. Vous pouvez créer un thème de coul
 
    ```json
    {
-   	"name": "DJVC Theme",
-   	"type": "dark",
-   	"colors": {},
-   	"tokenColors": [
-   		{
-   			"scope": "punctuation.period.djvc",
-   			"settings": {
-   				"foreground": "#FF0000"
-   			}
-   		},
-   		{
-   			"scope": "punctuation.comma.djvc",
-   			"settings": {
-   				"foreground": "#FFFF00"
-   			}
-   		},
-   		{
-   			"scope": "punctuation.parenthesis.djvc",
-   			"settings": {
-   				"foreground": "#00FF00"
-   			}
-   		}
-   	]
+     "name": "DJVC Theme",
+     "type": "dark",
+     "colors": {},
+     "tokenColors": [
+       {
+         "scope": "punctuation.period.djvc",
+         "settings": {
+           "foreground": "#FF0000"
+         }
+       },
+       {
+         "scope": "punctuation.comma.djvc",
+         "settings": {
+           "foreground": "#FFFF00"
+         }
+       },
+       {
+         "scope": "punctuation.parenthesis.djvc",
+         "settings": {
+           "foreground": "#00FF00"
+         }
+       }
+     ]
    }
    ```
 
@@ -155,21 +156,21 @@ GitHub Copilot: D'accord, simplifions cela. Vous pouvez créer un thème de coul
 
    ```json
    {
-   	"scopeName": "source.djvc",
-   	"patterns": [
-   		{
-   			"name": "punctuation.period.djvc",
-   			"match": "\\."
-   		},
-   		{
-   			"name": "punctuation.comma.djvc",
-   			"match": ","
-   		},
-   		{
-   			"name": "punctuation.parenthesis.djvc",
-   			"match": "[()]"
-   		}
-   	]
+     "scopeName": "source.djvc",
+     "patterns": [
+       {
+         "name": "punctuation.period.djvc",
+         "match": "\\."
+       },
+       {
+         "name": "punctuation.comma.djvc",
+         "match": ","
+       },
+       {
+         "name": "punctuation.parenthesis.djvc",
+         "match": "[()]"
+       }
+     ]
    }
    ```
 
@@ -286,24 +287,24 @@ Ouvrez le fichier `syntaxes/djvc.tmLanguage.json` et ajoutez les règles suivant
 
 ```json
 {
-	"scopeName": "source.djvc",
-	"patterns": [
-		{
-			"name": "punctuation.period.djvc",
-			"match": "\\."
-		},
-		{
-			"name": "punctuation.comma.djvc",
-			"match": ","
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "[()]"
-		}
-	],
-	"repository": {},
-	"fileTypes": ["djvc"],
-	"name": "DJVC"
+  "scopeName": "source.djvc",
+  "patterns": [
+    {
+      "name": "punctuation.period.djvc",
+      "match": "\\."
+    },
+    {
+      "name": "punctuation.comma.djvc",
+      "match": ","
+    },
+    {
+      "name": "punctuation.parenthesis.djvc",
+      "match": "[()]"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["djvc"],
+  "name": "DJVC"
 }
 ```
 
@@ -342,29 +343,29 @@ Créez un fichier `themes/DJVC-color-theme.json` et ajoutez les règles de color
 
 ```json
 {
-	"name": "DJVC Theme",
-	"type": "dark",
-	"colors": {},
-	"tokenColors": [
-		{
-			"scope": "punctuation.period.djvc",
-			"settings": {
-				"foreground": "#FF0000"
-			}
-		},
-		{
-			"scope": "punctuation.comma.djvc",
-			"settings": {
-				"foreground": "#FFFF00"
-			}
-		},
-		{
-			"scope": "punctuation.parenthesis.djvc",
-			"settings": {
-				"foreground": "#00FF00"
-			}
-		}
-	]
+  "name": "DJVC Theme",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    }
+  ]
 }
 ```
 
@@ -412,24 +413,24 @@ Ajoutez les règles de coloration syntaxique dans `djvc.tmLanguage.json` :
 
 ```json
 {
-	"scopeName": "source.djvc",
-	"patterns": [
-		{
-			"name": "punctuation.period.djvc",
-			"match": "\\."
-		},
-		{
-			"name": "punctuation.comma.djvc",
-			"match": ","
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "[()]"
-		}
-	],
-	"repository": {},
-	"fileTypes": ["djvc"],
-	"name": "DJVC"
+  "scopeName": "source.djvc",
+  "patterns": [
+    {
+      "name": "punctuation.period.djvc",
+      "match": "\\."
+    },
+    {
+      "name": "punctuation.comma.djvc",
+      "match": ","
+    },
+    {
+      "name": "punctuation.parenthesis.djvc",
+      "match": "[()]"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["djvc"],
+  "name": "DJVC"
 }
 ```
 
@@ -447,29 +448,29 @@ Ajoutez les règles de coloration dans `DJVC-color-theme.json` :
 
 ```json
 {
-	"name": "DJVC Theme",
-	"type": "dark",
-	"colors": {},
-	"tokenColors": [
-		{
-			"scope": "punctuation.period.djvc",
-			"settings": {
-				"foreground": "#FF0000"
-			}
-		},
-		{
-			"scope": "punctuation.comma.djvc",
-			"settings": {
-				"foreground": "#FFFF00"
-			}
-		},
-		{
-			"scope": "punctuation.parenthesis.djvc",
-			"settings": {
-				"foreground": "#00FF00"
-			}
-		}
-	]
+  "name": "DJVC Theme",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    }
+  ]
 }
 ```
 
@@ -521,39 +522,41 @@ GitHub Copilot: Pour vous assurer que le point d'entrée de l'extension est corr
 Ouvrez le fichier `src/extension.ts` et assurez-vous qu'il contient le code de base pour activer votre extension. Voici un exemple de ce à quoi il pourrait ressembler :
 
 ```typescript
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Félicitations, votre extension "djvc-syntax-highlighting" est maintenant active!');
+  console.log(
+    'Félicitations, votre extension "djvc-syntax-highlighting" est maintenant active!'
+  );
 
-	// Enregistrement de la grammaire pour le langage DJVC
-	const disposable = vscode.languages.setLanguageConfiguration('djvc', {
-		comments: {
-			lineComment: '//',
-			blockComment: ['/*', '*/']
-		},
-		brackets: [
-			['{', '}'],
-			['[', ']'],
-			['(', ')']
-		],
-		autoClosingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		],
-		surroundingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		]
-	});
+  // Enregistrement de la grammaire pour le langage DJVC
+  const disposable = vscode.languages.setLanguageConfiguration("djvc", {
+    comments: {
+      lineComment: "//",
+      blockComment: ["/*", "*/"],
+    },
+    brackets: [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+    ],
+    autoClosingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+    surroundingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+  });
 
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 }
 
 export function deactivate() {}
@@ -565,52 +568,52 @@ Assurez-vous que `package.json` contient les informations nécessaires pour acti
 
 ```json
 {
-	"name": "djvc-syntax-highlighting",
-	"displayName": "DJVC Syntax Highlighting",
-	"description": "Extension pour la coloration syntaxique des fichiers DJVC",
-	"version": "0.0.1",
-	"publisher": "votre-nom",
-	"engines": {
-		"vscode": "^1.50.0"
-	},
-	"categories": ["Programming Languages"],
-	"activationEvents": ["onLanguage:djvc"],
-	"main": "./out/extension.js",
-	"contributes": {
-		"languages": [
-			{
-				"id": "djvc",
-				"aliases": ["DJVC", "djvc"],
-				"extensions": [".djvc"],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "djvc",
-				"scopeName": "source.djvc",
-				"path": "./syntaxes/djvc.tmLanguage.json"
-			}
-		],
-		"themes": [
-			{
-				"label": "DJVC Theme",
-				"uiTheme": "vs-dark",
-				"path": "./themes/DJVC-color-theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"typescript": "^4.0.3",
-		"vscode": "^1.1.37",
-		"vscode-test": "^1.4.0"
-	}
+  "name": "djvc-syntax-highlighting",
+  "displayName": "DJVC Syntax Highlighting",
+  "description": "Extension pour la coloration syntaxique des fichiers DJVC",
+  "version": "0.0.1",
+  "publisher": "votre-nom",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:djvc"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "djvc",
+        "aliases": ["DJVC", "djvc"],
+        "extensions": [".djvc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "djvc",
+        "scopeName": "source.djvc",
+        "path": "./syntaxes/djvc.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "DJVC Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/DJVC-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.4.0"
+  }
 }
 ```
 
@@ -654,20 +657,20 @@ Assurez-vous que votre `tsconfig.json` inclut les types installés. Voici un exe
 
 ```json
 {
-	"compilerOptions": {
-		"target": "es6",
-		"module": "commonjs",
-		"lib": ["es6", "dom"],
-		"outDir": "out",
-		"rootDir": "src",
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
-		"typeRoots": ["node_modules/@types"]
-	},
-	"include": ["src"],
-	"exclude": ["node_modules", ".vscode-test"]
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "outDir": "out",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", ".vscode-test"]
 }
 ```
 
@@ -684,39 +687,41 @@ npm run compile
 Assurez-vous que le fichier `src/extension.ts` est correctement configuré. Voici un exemple de ce à quoi il pourrait ressembler :
 
 ```typescript
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Félicitations, votre extension "djvc-syntax-highlighting" est maintenant active!');
+  console.log(
+    'Félicitations, votre extension "djvc-syntax-highlighting" est maintenant active!'
+  );
 
-	// Enregistrement de la grammaire pour le langage DJVC
-	const disposable = vscode.languages.setLanguageConfiguration('djvc', {
-		comments: {
-			lineComment: '//',
-			blockComment: ['/*', '*/']
-		},
-		brackets: [
-			['{', '}'],
-			['[', ']'],
-			['(', ')']
-		],
-		autoClosingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		],
-		surroundingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		]
-	});
+  // Enregistrement de la grammaire pour le langage DJVC
+  const disposable = vscode.languages.setLanguageConfiguration("djvc", {
+    comments: {
+      lineComment: "//",
+      blockComment: ["/*", "*/"],
+    },
+    brackets: [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+    ],
+    autoClosingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+    surroundingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+  });
 
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 }
 
 export function deactivate() {}
@@ -748,52 +753,52 @@ pour inclure la configuration de la grammaire :
 ```typescript
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "djvc" is now active!');
+  // Use the console to output diagnostic information (console.log) and errors (console.error)
+  // This line of code will only be executed once when your extension is activated
+  console.log('Congratulations, your extension "djvc" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('djvc.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from djvcext!');
-	});
+  // The command has been defined in the package.json file
+  // Now provide the implementation of the command with registerCommand
+  // The commandId parameter must match the command field in package.json
+  const disposable = vscode.commands.registerCommand("djvc.helloWorld", () => {
+    // The code you place here will be executed every time your command is executed
+    // Display a message box to the user
+    vscode.window.showInformationMessage("Hello World from djvcext!");
+  });
 
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 
-	// Enregistrement de la grammaire pour le langage DJVC
-	vscode.languages.setLanguageConfiguration('djvc', {
-		comments: {
-			lineComment: '//',
-			blockComment: ['/*', '*/']
-		},
-		brackets: [
-			['{', '}'],
-			['[', ']'],
-			['(', ')']
-		],
-		autoClosingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		],
-		surroundingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		]
-	});
+  // Enregistrement de la grammaire pour le langage DJVC
+  vscode.languages.setLanguageConfiguration("djvc", {
+    comments: {
+      lineComment: "//",
+      blockComment: ["/*", "*/"],
+    },
+    brackets: [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+    ],
+    autoClosingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+    surroundingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+  });
 }
 
 // This method is called when your extension is deactivated
@@ -838,52 +843,52 @@ Assurez-vous que `package.json` contient les informations nécessaires pour acti
 
 ```json
 {
-	"name": "djvc-syntax-highlighting",
-	"displayName": "DJVC Syntax Highlighting",
-	"description": "Extension pour la coloration syntaxique des fichiers DJVC",
-	"version": "0.0.1",
-	"publisher": "votre-nom",
-	"engines": {
-		"vscode": "^1.50.0"
-	},
-	"categories": ["Programming Languages"],
-	"activationEvents": ["onLanguage:djvc"],
-	"main": "./out/extension.js",
-	"contributes": {
-		"languages": [
-			{
-				"id": "djvc",
-				"aliases": ["DJVC", "djvc"],
-				"extensions": [".djvc"],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "djvc",
-				"scopeName": "source.djvc",
-				"path": "./syntaxes/djvc.tmLanguage.json"
-			}
-		],
-		"themes": [
-			{
-				"label": "DJVC Theme",
-				"uiTheme": "vs-dark",
-				"path": "./themes/DJVC-color-theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"typescript": "^4.0.3",
-		"vscode": "^1.1.37",
-		"vscode-test": "^1.4.0"
-	}
+  "name": "djvc-syntax-highlighting",
+  "displayName": "DJVC Syntax Highlighting",
+  "description": "Extension pour la coloration syntaxique des fichiers DJVC",
+  "version": "0.0.1",
+  "publisher": "votre-nom",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:djvc"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "djvc",
+        "aliases": ["DJVC", "djvc"],
+        "extensions": [".djvc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "djvc",
+        "scopeName": "source.djvc",
+        "path": "./syntaxes/djvc.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "DJVC Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/DJVC-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.4.0"
+  }
 }
 ```
 
@@ -913,45 +918,45 @@ Voici comment mettre à jour votre fichier `extension.ts` :
 ```typescript
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "djvc" is now active!');
+  // Use the console to output diagnostic information (console.log) and errors (console.error)
+  // This line of code will only be executed once when your extension is activated
+  console.log('Congratulations, your extension "djvc" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('djvc.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from djvcext!');
-	});
+  // The command has been defined in the package.json file
+  // Now provide the implementation of the command with registerCommand
+  // The commandId parameter must match the command field in package.json
+  const disposable = vscode.commands.registerCommand("djvc.helloWorld", () => {
+    // The code you place here will be executed every time your command is executed
+    // Display a message box to the user
+    vscode.window.showInformationMessage("Hello World from djvcext!");
+  });
 
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 
-	// Enregistrement de la grammaire pour le langage DJVC
-	vscode.languages.setLanguageConfiguration('djvc', {
-		comments: {
-			lineComment: '//',
-			blockComment: ['/*', '*/']
-		},
-		brackets: [
-			['{', '}'],
-			['[', ']'],
-			['(', ')']
-		],
-		autoClosingPairs: [
-			{ open: '{', close: '}' },
-			{ open: '[', close: ']' },
-			{ open: '(', close: ')' },
-			{ open: '"', close: '"' },
-			{ open: "'", close: "'" }
-		]
-	});
+  // Enregistrement de la grammaire pour le langage DJVC
+  vscode.languages.setLanguageConfiguration("djvc", {
+    comments: {
+      lineComment: "//",
+      blockComment: ["/*", "*/"],
+    },
+    brackets: [
+      ["{", "}"],
+      ["[", "]"],
+      ["(", ")"],
+    ],
+    autoClosingPairs: [
+      { open: "{", close: "}" },
+      { open: "[", close: "]" },
+      { open: "(", close: ")" },
+      { open: '"', close: '"' },
+      { open: "'", close: "'" },
+    ],
+  });
 }
 
 // This method is called when your extension is deactivated
@@ -985,58 +990,58 @@ Assurez-vous que `package.json` contient les bonnes configurations pour les fich
 
 ```json
 {
-	"name": "djvc-syntax-highlighting",
-	"displayName": "DJVC Syntax Highlighting",
-	"description": "Extension pour la coloration syntaxique des fichiers DJVC",
-	"version": "0.0.1",
-	"publisher": "votre-nom",
-	"engines": {
-		"vscode": "^1.50.0"
-	},
-	"categories": ["Programming Languages"],
-	"activationEvents": ["onLanguage:djvc"],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "djvc.helloWorld",
-				"title": "Hello World"
-			}
-		],
-		"languages": [
-			{
-				"id": "djvc",
-				"aliases": ["DJVC", "djvc"],
-				"extensions": [".djvc"],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "djvc",
-				"scopeName": "source.djvc",
-				"path": "./syntaxes/djvc.tmLanguage.json"
-			}
-		],
-		"themes": [
-			{
-				"label": "DJVC Theme",
-				"uiTheme": "vs-dark",
-				"path": "./themes/DJVC-color-theme.json"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"typescript": "^4.0.3",
-		"vscode": "^1.1.37",
-		"vscode-test": "^1.4.0"
-	}
+  "name": "djvc-syntax-highlighting",
+  "displayName": "DJVC Syntax Highlighting",
+  "description": "Extension pour la coloration syntaxique des fichiers DJVC",
+  "version": "0.0.1",
+  "publisher": "votre-nom",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:djvc"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "djvc.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "djvc",
+        "aliases": ["DJVC", "djvc"],
+        "extensions": [".djvc"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "djvc",
+        "scopeName": "source.djvc",
+        "path": "./syntaxes/djvc.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "DJVC Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/DJVC-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.4.0"
+  }
 }
 ```
 
@@ -1046,24 +1051,24 @@ Assurez-vous que le fichier `syntaxes/djvc.tmLanguage.json` contient les règles
 
 ```json
 {
-	"scopeName": "source.djvc",
-	"patterns": [
-		{
-			"name": "punctuation.period.djvc",
-			"match": "\\."
-		},
-		{
-			"name": "punctuation.comma.djvc",
-			"match": ","
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "[()]"
-		}
-	],
-	"repository": {},
-	"fileTypes": ["djvc"],
-	"name": "DJVC"
+  "scopeName": "source.djvc",
+  "patterns": [
+    {
+      "name": "punctuation.period.djvc",
+      "match": "\\."
+    },
+    {
+      "name": "punctuation.comma.djvc",
+      "match": ","
+    },
+    {
+      "name": "punctuation.parenthesis.djvc",
+      "match": "[()]"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["djvc"],
+  "name": "DJVC"
 }
 ```
 
@@ -1073,29 +1078,29 @@ Assurez-vous que le fichier `themes/DJVC-color-theme.json` contient les règles 
 
 ```json
 {
-	"name": "DJVC Theme",
-	"type": "dark",
-	"colors": {},
-	"tokenColors": [
-		{
-			"scope": "punctuation.period.djvc",
-			"settings": {
-				"foreground": "#FF0000"
-			}
-		},
-		{
-			"scope": "punctuation.comma.djvc",
-			"settings": {
-				"foreground": "#FFFF00"
-			}
-		},
-		{
-			"scope": "punctuation.parenthesis.djvc",
-			"settings": {
-				"foreground": "#00FF00"
-			}
-		}
-	]
+  "name": "DJVC Theme",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    }
+  ]
 }
 ```
 
@@ -1215,14 +1220,14 @@ package.json
 
 ```json
 {
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/[votre-username]/djvc-syntax-highlighting.git"
-	},
-	"bugs": {
-		"url": "https://github.com/[votre-username]/djvc-syntax-highlighting/issues"
-	},
-	"license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/[votre-username]/djvc-syntax-highlighting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/[votre-username]/djvc-syntax-highlighting/issues"
+  },
+  "license": "MIT"
 }
 ```
 
@@ -1306,10 +1311,10 @@ package.json
 
 ```json
 {
-	"funding": {
-		"type": "github",
-		"url": "https://github.com/sponsors/votre-username"
-	}
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/votre-username"
+  }
 }
 ```
 
@@ -1454,24 +1459,24 @@ git remote add origin https://github.com/DvGt-dev/djvc-syntax-highlighting.git
 
 ```json
 {
-	"scopeName": "source.djvc",
-	"patterns": [
-		{
-			"name": "punctuation.period.djvc",
-			"match": "\\."
-		},
-		{
-			"name": "punctuation.comma.djvc",
-			"match": ","
-		},
-		{
-			"name": "punctuation.parenthesis.djvc",
-			"match": "[()]"
-		}
-	],
-	"repository": {},
-	"fileTypes": ["djvc"],
-	"name": "DJVC"
+  "scopeName": "source.djvc",
+  "patterns": [
+    {
+      "name": "punctuation.period.djvc",
+      "match": "\\."
+    },
+    {
+      "name": "punctuation.comma.djvc",
+      "match": ","
+    },
+    {
+      "name": "punctuation.parenthesis.djvc",
+      "match": "[()]"
+    }
+  ],
+  "repository": {},
+  "fileTypes": ["djvc"],
+  "name": "DJVC"
 }
 ```
 
@@ -1479,29 +1484,29 @@ git remote add origin https://github.com/DvGt-dev/djvc-syntax-highlighting.git
 
 ```json
 {
-	"name": "DJVC Theme",
-	"type": "dark",
-	"colors": {},
-	"tokenColors": [
-		{
-			"scope": "punctuation.period.djvc",
-			"settings": {
-				"foreground": "#FF0000"
-			}
-		},
-		{
-			"scope": "punctuation.comma.djvc",
-			"settings": {
-				"foreground": "#FFFF00"
-			}
-		},
-		{
-			"scope": "punctuation.parenthesis.djvc",
-			"settings": {
-				"foreground": "#00FF00"
-			}
-		}
-	]
+  "name": "DJVC Theme",
+  "type": "dark",
+  "colors": {},
+  "tokenColors": [
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    }
+  ]
 }
 ```
 
@@ -1521,18 +1526,21 @@ vsce package
 vsce publish
 
 # 4. Mettre à jour package.json
-   {
-   "repository": {
-   "type": "git",
-   "url": "https://github.com/[votre-username]/djvc-syntax-highlighting.git"
-   },
-   "bugs": {
-   "url": "https://github.com/[votre-username]/djvc-syntax-highlighting/issues"
-   },
-   "license": "MIT"
-   }
+
+{
+"repository": {
+"type": "git",
+"url": "https://github.com/[votre-username]/djvc-syntax-highlighting.git"
+},
+"bugs": {
+"url": "https://github.com/[votre-username]/djvc-syntax-highlighting/issues"
+},
+"license": "MIT"
+}
+
 # 5. Ajouter des guidelines pour les contributeurs
-#    Créer un fichier CONTRIBUTING.md :
+
+# Créer un fichier CONTRIBUTING.md :
 
 # Contributing
 

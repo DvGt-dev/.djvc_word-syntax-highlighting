@@ -49,6 +49,24 @@
       }
     },
     {
+      "scope": [
+        "markup.heading.djvc",
+        "markup.heading.title.djvc",
+        "entity.name.section.djvc"
+      ],
+      "settings": {
+        "foreground": "#569CD6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "entity.name.uppercase.djvc",
+      "settings": {
+        "foreground": "#FFA500",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "scope": "markup.bold",
       "settings": {
         "foreground": "#569CD6",
