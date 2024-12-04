@@ -1,25 +1,41 @@
 {
-	"comments": {
-		"lineComment": "//",
-		"blockComment": ["/*", "*/"]
-	},
-	"brackets": [
-		["{", "}"],
-		["[", "]"],
-		["(", ")"]
-	],
-	"autoClosingPairs": [
-		{ "open": "{", "close": "}" },
-		{ "open": "[", "close": "]" },
-		{ "open": "(", "close": ")" },
-		{ "open": "\"", "close": "\"" },
-		{ "open": "'", "close": "'" }
-	],
-	"surroundingPairs": [
-		{ "open": "{", "close": "}" },
-		{ "open": "[", "close": "]" },
-		{ "open": "(", "close": ")" },
-		{ "open": "\"", "close": "\"" },
-		{ "open": "'", "close": "'" }
-	]
+  "comments": {
+    "lineComment": "//",
+    "blockComment": ["/*", "*/"]
+  },
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "{", "close": "}" },
+    { "open": "[", "close": "]" },
+    { "open": "(", "close": ")" },
+    { "open": "\"", "close": "\"" },
+    { "open": "'", "close": "'" }
+  ],
+  "surroundingPairs": [
+    { "open": "{", "close": "}" },
+    { "open": "[", "close": "]" },
+    { "open": "(", "close": ")" },
+    { "open": "\"", "close": "\"" },
+    { "open": "'", "close": "'" }
+  ],
+  "colors": {
+    "editor.foreground": "#FFFFFF",
+    "editorLineNumber.foreground": "#858585",
+    "editorMarkdown.foreground": "#FFFFFF",
+    "editor.selectionBackground": "#264F78",
+    "editor.background": "#1E1E1E"
+  },
+  "tokenColors": {
+    "punctuation": "#FFFFFF",
+    "markdown": "#FFFFFF",
+    "heading": "#569CD6",
+    "bold": "#569CD6",
+    "italic": "#CE9178",
+    "list": "#6796E6",
+    "link": "#4EC9B0"
+  }
 }

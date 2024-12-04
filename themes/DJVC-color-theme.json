@@ -1,7 +1,14 @@
 {
   "name": "DJVC Theme",
   "type": "dark",
-  "colors": {},
+  "colors": {
+    "editor.foreground": "#FFFFFF",
+    "editorMarkdownHeading.foreground": "#569CD6",
+    "editorMarkdownBold.foreground": "#569CD6",
+    "editorMarkdownItalic.foreground": "#CE9178",
+    "editorMarkdownListMarker.foreground": "#6796E6",
+    "editorMarkdownLink.foreground": "#4EC9B0"
+  },
   "tokenColors": [
     {
       "scope": "punctuation.period.djvc",
@@ -31,6 +38,39 @@
       "scope": "punctuation.parenthesis.djvc",
       "settings": {
         "foreground": "#00b9ec"
+      }
+    },
+    {
+      "scope": "markup.heading.djvc",
+      "settings": {
+        "foreground": "#569CD6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.bold.djvc",
+      "settings": {
+        "foreground": "#569CD6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.italic.djvc",
+      "settings": {
+        "foreground": "#CE9178",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.list.djvc",
+      "settings": {
+        "foreground": "#6796E6"
+      }
+    },
+    {
+      "scope": "markup.link.djvc",
+      "settings": {
+        "foreground": "#4EC9B0"
       }
     }
   ]

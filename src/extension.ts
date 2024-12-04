@@ -52,27 +52,60 @@ export function activate(context: vscode.ExtensionContext) {
     ],
   });
 
+  // Ajout de la configuration globale des thèmes
+  vscode.workspace.getConfiguration().update(
+    "editor.tokenColorCustomizations",
+    {
+      "[*]": {
+        textMateRules: [
+          {
+            scope: "punctuation.period.djvc",
+            settings: { foreground: "#FF0000" },
+          },
+          {
+            scope: "punctuation.comma.djvc",
+            settings: { foreground: "#00FF00" },
+          },
+          {
+            scope: "markup.heading.djvc",
+            settings: {
+              foreground: "#569CD6",
+              fontStyle: "bold",
+            },
+          },
+          // ...autres règles de coloration...
+        ],
+      },
+    },
+    true
+  );
+
   // Register the DJVC syntax highlighting
   vscode.languages.registerDocumentSemanticTokensProvider(
-    { language: "djvc" },
+    { language: "djvc", scheme: "file" }, // Ajout de scheme: 'file'
     new DJVCSemanticTokensProvider(),
     legend
   );
 
-  // Remove the color provider registration |dv_attention
-  vscode.languages.registerColorProvider("djvc", new DJVCColorProvider());
+  // Remove the color provider registration
+  // vscode.languages.registerColorProvider("djvc", new DJVCColorProvider());
 }
 
-// Define the legend for the semantic tokens
+// Define the legend for the semantic tokens with modifiers
 const legend = new vscode.SemanticTokensLegend(
   [
-    "punctuation.period",
-    "punctuation.comma",
-    "punctuation.2pts",
-    "punctuation.apostrph",
-    "punctuation.parenthesis",
+    "punctuation.period.djvc",
+    "punctuation.comma.djvc",
+    "punctuation.2pts.djvc",
+    "punctuation.apostrph.djvc",
+    "punctuation.parenthesis.djvc",
+    "heading",
+    "bold",
+    "italic",
+    "list",
+    "link",
   ],
-  []
+  ["declaration", "documentation", "markdown"] // Ajout de modifiers
 );
 
 // Implement the semantic tokens provider
@@ -85,6 +118,29 @@ class DJVCSemanticTokensProvider
     const tokensBuilder = new vscode.SemanticTokensBuilder(legend);
     const text = document.getText();
 
+    // Ajout des patterns Markdown
+    const patterns = [
+      { type: "heading", regex: /^#{1,6}\s.*$/gm },
+      { type: "bold", regex: /\*\*.*?\*\*/g },
+      { type: "italic", regex: /\*.*?\*/g },
+      { type: "list", regex: /^[\*\-\+]\s.*$/gm },
+      { type: "link", regex: /\[.*?\]\(.*?\)/g },
+    ];
+
+    patterns.forEach(({ type, regex }) => {
+      let match;
+      while ((match = regex.exec(text))) {
+        const startPos = document.positionAt(match.index);
+        tokensBuilder.push(
+          startPos.line,
+          startPos.character,
+          match[0].length,
+          legend.tokenTypes.indexOf(type),
+          legend.tokenModifiers.indexOf("markdown")
+        );
+      }
+    });
+
     // Add logic to identify and classify tokens based on the text
     // For example:
     const regex = /(\.|\#|\,|\:|\d)/g;
@@ -96,19 +152,19 @@ class DJVCSemanticTokensProvider
 
       switch (match[0]) {
         case ".":
-          tokenType = "punctuation.period";
+          tokenType = "punctuation.period.djvc";
           break;
         case ",":
-          tokenType = "punctuation.comma";
+          tokenType = "punctuation.comma.djvc";
           break;
-        case ":":
-          tokenType = "punctuation.2pts";
+        case "²:":
+          tokenType = "punctuation.2pts.djvc";
           break;
         case "#":
-          tokenType = "punctuation.apostrph";
+          tokenType = "punctuation.apostrph.djvc";
           break;
         case /\d/.test(match[0]) ? match[0] : null:
-          tokenType = "punctuation.parenthesis";
+          tokenType = "punctuation.parenthesis.djvc";
           break;
       }
 
@@ -117,7 +173,7 @@ class DJVCSemanticTokensProvider
         document.positionAt(start).character,
         length,
         legend.tokenTypes.indexOf(tokenType),
-        0
+        legend.tokenModifiers.indexOf("declaration")
       );
     }
 
@@ -127,56 +183,3 @@ class DJVCSemanticTokensProvider
 
 // This method is called when your extension is deactivated
 export function deactivate() {}
-
-// Remove the color provider implementation
-class DJVCColorProvider implements vscode.DocumentColorProvider {
-  provideDocumentColors(
-    document: vscode.TextDocument
-  ): vscode.ProviderResult<vscode.ColorInformation[]> {
-    const colors: vscode.ColorInformation[] = [];
-    const text = document.getText();
-
-    // Add logic to identify and classify colors based on the text
-    // For example:
-    const regex = /(\.|\#|\,|\:|\d)/g;
-    let match;
-    while ((match = regex.exec(text))) {
-      const start = match.index;
-      const length = match[0].length;
-      let color: vscode.Color = new vscode.Color(0, 0, 0, 1); // Default color (black)
-
-      switch (match[0]) {
-        case ".":
-          color = new vscode.Color(1, 0, 0, 1); // Red
-          break;
-        case ",":
-          color = new vscode.Color(0, 1, 0, 1); // Green
-          break;
-        case ":":
-          color = new vscode.Color(0.85, 0.31, 1, 1); // Purple
-          break;
-        case "#":
-          color = new vscode.Color(0.7, 0.01, 1, 1); // Magenta
-          break;
-        case /\d/.test(match[0]) ? match[0] : null:
-          color = new vscode.Color(0, 0.73, 0.92, 1); // Cyan
-          break;
-      }
-
-      const range = new vscode.Range(
-        document.positionAt(start),
-        document.positionAt(start + length)
-      );
-      colors.push(new vscode.ColorInformation(range, color));
-    }
-
-    return colors;
-  }
-
-  provideColorPresentations(
-    color: vscode.Color,
-    context: { document: vscode.TextDocument; range: vscode.Range }
-  ): vscode.ProviderResult<vscode.ColorPresentation[]> {
-    return [];
-  }
-}

@@ -47,7 +47,89 @@
         "uiTheme": "vs-dark",
         "path": "./themes/DJVC-color-theme.json"
       }
-    ]
+    ],
+    "semanticTokenTypes": {
+      "punctuation.period.djvc": {
+        "description": "A period in DJVC"
+      },
+      "punctuation.comma.djvc": {
+        "description": "A comma in DJVC"
+      },
+      "punctuation.2pts.djvc": {
+        "description": "Two points in DJVC"
+      },
+      "punctuation.apostrph.djvc": {
+        "description": "An apostrophe in DJVC"
+      },
+      "punctuation.parenthesis.djvc": {
+        "description": "A parenthesis in DJVC"
+      },
+      "markup.heading.djvc": {
+        "description": "A heading in Markdown"
+      },
+      "markup.bold.djvc": {
+        "description": "Bold text in Markdown"
+      },
+      "markup.italic.djvc": {
+        "description": "Italic text in Markdown"
+      },
+      "markup.list.djvc": {
+        "description": "List item in Markdown"
+      },
+      "markup.link.djvc": {
+        "description": "Link in Markdown"
+      }
+    },
+    "semanticTokenModifiers": {
+      "declaration": {
+        "description": "Style declaration"
+      },
+      "documentation": {
+        "description": "Documentation text"
+      }
+    },
+    "configurationDefaults": {
+      "[djvc]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": "punctuation.period.djvc",
+              "settings": {
+                "foreground": "#FF0000"
+              }
+            },
+            {
+              "scope": "punctuation.comma.djvc",
+              "settings": {
+                "foreground": "#00FF00"
+              }
+            },
+            {
+              "scope": "markup.heading.djvc",
+              "settings": {
+                "foreground": "#569CD6",
+                "fontStyle": "bold"
+              }
+            },
+            {
+              "scope": "markup.bold.djvc",
+              "settings": {
+                "foreground": "#569CD6",
+                "fontStyle": "bold"
+              }
+            },
+            {
+              "scope": "markup.italic.djvc",
+              "settings": {
+                "foreground": "#CE9178",
+                "fontStyle": "italic"
+              }
+            }
+          ]
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

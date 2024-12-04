@@ -20,6 +20,26 @@
     {
       "name": "punctuation.parenthesis.djvc",
       "match": "\\d"
+    },
+    {
+      "name": "markup.heading.djvc",
+      "match": "^#{1,6}\\s.*$"
+    },
+    {
+      "name": "markup.bold.djvc",
+      "match": "\\*\\*.*?\\*\\*"
+    },
+    {
+      "name": "markup.italic.djvc",
+      "match": "\\*.*?\\*"
+    },
+    {
+      "name": "markup.list.djvc",
+      "match": "^[\\*\\-\\+]\\s.*$"
+    },
+    {
+      "name": "markup.link.djvc",
+      "match": "\\[.*?\\]\\(.*?\\)"
     }
   ],
   "repository": {},
