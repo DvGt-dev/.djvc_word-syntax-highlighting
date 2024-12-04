@@ -52,34 +52,6 @@ export function activate(context: vscode.ExtensionContext) {
     ],
   });
 
-  // Ajout de la configuration globale des thèmes
-  vscode.workspace.getConfiguration().update(
-    "editor.tokenColorCustomizations",
-    {
-      "[*]": {
-        textMateRules: [
-          {
-            scope: "punctuation.period.djvc",
-            settings: { foreground: "#FF0000" },
-          },
-          {
-            scope: "punctuation.comma.djvc",
-            settings: { foreground: "#00FF00" },
-          },
-          {
-            scope: "markup.heading.djvc",
-            settings: {
-              foreground: "#569CD6",
-              fontStyle: "bold",
-            },
-          },
-          // ...autres règles de coloration...
-        ],
-      },
-    },
-    true
-  );
-
   // Register the DJVC syntax highlighting
   vscode.languages.registerDocumentSemanticTokensProvider(
     { language: "djvc", scheme: "file" }, // Ajout de scheme: 'file'

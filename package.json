@@ -87,48 +87,6 @@
       "documentation": {
         "description": "Documentation text"
       }
-    },
-    "configurationDefaults": {
-      "[djvc]": {
-        "editor.semanticHighlighting.enabled": true,
-        "editor.tokenColorCustomizations": {
-          "textMateRules": [
-            {
-              "scope": "punctuation.period.djvc",
-              "settings": {
-                "foreground": "#FF0000"
-              }
-            },
-            {
-              "scope": "punctuation.comma.djvc",
-              "settings": {
-                "foreground": "#00FF00"
-              }
-            },
-            {
-              "scope": "markup.heading.djvc",
-              "settings": {
-                "foreground": "#569CD6",
-                "fontStyle": "bold"
-              }
-            },
-            {
-              "scope": "markup.bold.djvc",
-              "settings": {
-                "foreground": "#569CD6",
-                "fontStyle": "bold"
-              }
-            },
-            {
-              "scope": "markup.italic.djvc",
-              "settings": {
-                "foreground": "#CE9178",
-                "fontStyle": "italic"
-              }
-            }
-          ]
-        }
-      }
     }
   },
   "scripts": {
