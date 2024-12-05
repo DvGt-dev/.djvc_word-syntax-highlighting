@@ -204,6 +204,60 @@
       "settings": {
         "foreground": "#482e2e"
       }
+    },
+    {
+      "scope": "punctuation.definition.string.begin.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.definition.string.end.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "scope": "string.quoted.content.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.parentheses.begin.djvc",
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "scope": "punctuation.parentheses.end.djvc",
+      "settings": {
+        "foreground": "#00FFFF"
+      }
+    },
+    {
+      "scope": "string.parentheses.content.djvc",
+      "settings": {
+        "foreground": "#888888"
+      }
+    },
+    {
+      "scope": "punctuation.french.quote.begin.djvc",
+      "settings": {
+        "foreground": "#FFA500"
+      }
+    },
+    {
+      "scope": "punctuation.french.quote.end.djvc",
+      "settings": {
+        "foreground": "#4169E1"
+      }
+    },
+    {
+      "scope": "string.french.quote.content.djvc",
+      "settings": {
+        "foreground": "#98FB98"
+      }
     }
   ]
 }
