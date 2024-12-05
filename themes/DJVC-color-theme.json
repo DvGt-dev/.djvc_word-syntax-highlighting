@@ -2,9 +2,16 @@
   "name": "DJVC Theme",
   "type": "dark",
   "colors": {
-    "editor.foreground": "#808080"
+    "editor.foreground": "#808080",
+    "editor.background": "#1E1E1E" // Ajouter cette ligne pour être sûr
   },
   "tokenColors": [
+    {
+      "scope": "source.djvc", // Ajouter cette règle en premier
+      "settings": {
+        "foreground": "#808080"
+      }
+    },
     {
       "scope": "punctuation.period.djvc",
       "settings": {

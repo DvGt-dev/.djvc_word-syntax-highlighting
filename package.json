@@ -132,37 +132,6 @@
             }
           ]
         }
-      },
-      "[*]": {
-        "editor.semanticHighlighting.enabled": true,
-        "editor.tokenColorCustomizations": {
-          "textMateRules": [
-            {
-              "scope": [
-                "source.djvc"
-              ],
-              "settings": {
-                "foreground": "#FFFFFF"
-              }
-            },
-            {
-              "scope": [
-                "punctuation.period.djvc"
-              ],
-              "settings": {
-                "foreground": "#FF0000"
-              }
-            },
-            {
-              "scope": [
-                "punctuation.comma.djvc"
-              ],
-              "settings": {
-                "foreground": "#00FF00"
-              }
-            }
-          ]
-        }
       }
     }
   },
