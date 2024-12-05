@@ -12,6 +12,180 @@
         "foreground": "#808080",
         "fontStyle": ""
       }
+    },
+    {
+      "scope": "entity.name.uppercase.djvc",
+      "settings": {
+        "foreground": "#FFA500",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["source.djvc", "text.djvc", "meta.embedded.block.djvc"],
+      "settings": {
+        "foreground": "#808080",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "meta.paragraph.djvc",
+      "settings": {
+        "foreground": "#808080"
+      }
+    },
+    {
+      "scope": "source.djvc",
+      "settings": {
+        "foreground": "#695757"
+      }
+    },
+    {
+      "scope": "punctuation.period.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.comma.djvc",
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "scope": "punctuation.2pts.djvc",
+      "settings": {
+        "foreground": "#d94eff"
+      }
+    },
+    {
+      "scope": "punctuation.apostrph.djvc",
+      "settings": {
+        "foreground": "#b301ff"
+      }
+    },
+    {
+      "scope": "punctuation.parenthesis.djvc",
+      "settings": {
+        "foreground": "#62c2dc"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading",
+        "markup.heading.markdown",
+        "markup.heading.setext.1.markdown",
+        "markup.heading.setext.2.markdown",
+        "markup.heading.atx.markdown"
+      ],
+      "settings": {
+        "foreground": "#467fae",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading.djvc",
+        "markup.heading.title.djvc",
+        "entity.name.section.djvc"
+      ],
+      "settings": {
+        "foreground": "#56cdd6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.bold",
+      "settings": {
+        "foreground": "#569CD6",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.italic",
+      "settings": {
+        "foreground": "#CE9178",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.list",
+      "settings": {
+        "foreground": "#6796E6"
+      }
+    },
+    {
+      "scope": "markup.underline.link",
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "scope": "string.quoted.double.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "meta.parentheses.djvc",
+      "settings": {
+        "foreground": "#FFA500"
+      }
+    },
+    {
+      "scope": "punctuation.definition.quote.begin.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.definition.quote.end.djvc",
+      "settings": {
+        "foreground": "#3a8bc1"
+      }
+    },
+    {
+      "scope": "string.quoted.double.french.djvc",
+      "settings": {
+        "foreground": "#FFD700"
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.begin.djvc",
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.end.djvc",
+      "settings": {
+        "foreground": "#8858b5"
+      }
+    },
+    {
+      "scope": "meta.group.djvc",
+      "settings": {
+        "foreground": "#999920"
+      }
+    },
+    {
+      "scope": "string.text.inside.group.djvc",
+      "settings": {
+        "foreground": "#FFA500"
+      }
+    },
+    {
+      "scope": "markup.heading.marker.djvc",
+      "settings": {
+        "foreground": "#FF6B6B",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.heading.text.djvc",
+      "settings": {
+        "foreground": "#4CD7D0",
+        "fontStyle": "bold"
+      }
     }
   ]
 }
