@@ -6,50 +6,74 @@
     "editor.background": "#1E1E1E"
   },
   "tokenColors": [
+    // Base text style
     {
-      "scope": "source.djvc",
-      "settings": {
-        "foreground": "#888095"
-      }
-    },
-    // {
-    //   "scope": [
-    //     "markup.heading",
-    //     "markup.heading.markdown",
-    //     "markup.heading.setext.1.markdown",
-    //     "markup.heading.setext.2.markdown",
-    //     "markup.heading.atx.markdown"
-    //   ],
-    //   "settings": {
-    //     "foreground": "#467fae",
-    //     "fontStyle": "bold"
-    //   }
-    // },
-    {
-      "scope": ["source.djvc"],
+      "scope": [
+        "source.djvc",
+        "text.djvc",
+        "meta.embedded.block.djvc",
+        "meta.paragraph.djvc"
+      ],
       "settings": {
         "foreground": "#808080",
         "fontStyle": ""
       }
     },
+
+    // Quotes styling
+    {
+      "scope": [
+        "punctuation.definition.string.begin.djvc",
+        "punctuation.french.quote.begin.djvc"
+      ],
+      "settings": {
+        "foreground": "#FF0000"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string.end.djvc",
+        "punctuation.french.quote.end.djvc"
+      ],
+      "settings": {
+        "foreground": "#00FF00"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted.content.djvc",
+        "string.french.quote.content.djvc"
+      ],
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+
+    // Parentheses styling
+    {
+      "scope": "punctuation.parentheses.begin.djvc",
+      "settings": {
+        "foreground": "#FF00FF"
+      }
+    },
+    {
+      "scope": "punctuation.parentheses.end.djvc",
+      "settings": {
+        "foreground": "#00FFFF"
+      }
+    },
+    {
+      "scope": "string.parentheses.content.djvc",
+      "settings": {
+        "foreground": "#888888"
+      }
+    },
+
     {
       "scope": "entity.name.uppercase.djvc",
       "settings": {
         "foreground": "#FFA500",
         "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": ["source.djvc", "text.djvc", "meta.embedded.block.djvc"],
-      "settings": {
-        "foreground": "#808080",
-        "fontStyle": ""
-      }
-    },
-    {
-      "scope": "meta.paragraph.djvc",
-      "settings": {
-        "foreground": "#808080"
       }
     },
     {
@@ -206,57 +230,9 @@
       }
     },
     {
-      "scope": "punctuation.definition.string.begin.djvc",
-      "settings": {
-        "foreground": "#FF0000"
-      }
-    },
-    {
-      "scope": "punctuation.definition.string.end.djvc",
-      "settings": {
-        "foreground": "#00FF00"
-      }
-    },
-    {
       "scope": "string.quoted.content.djvc",
       "settings": {
         "foreground": "#FFFF00"
-      }
-    },
-    {
-      "scope": "punctuation.parentheses.begin.djvc",
-      "settings": {
-        "foreground": "#FF00FF"
-      }
-    },
-    {
-      "scope": "punctuation.parentheses.end.djvc",
-      "settings": {
-        "foreground": "#00FFFF"
-      }
-    },
-    {
-      "scope": "string.parentheses.content.djvc",
-      "settings": {
-        "foreground": "#888888"
-      }
-    },
-    {
-      "scope": "punctuation.french.quote.begin.djvc",
-      "settings": {
-        "foreground": "#FFA500"
-      }
-    },
-    {
-      "scope": "punctuation.french.quote.end.djvc",
-      "settings": {
-        "foreground": "#4169E1"
-      }
-    },
-    {
-      "scope": "string.french.quote.content.djvc",
-      "settings": {
-        "foreground": "#98FB98"
       }
     }
   ]
