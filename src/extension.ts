@@ -198,7 +198,7 @@ class DJVCSemanticTokensProvider
     });
 
     // Traiter les lettres majuscules après
-    const uppercasePattern = /[A-Z]/g; // Correspond à chaque lettre majuscule
+    const uppercasePattern = /\b\p{Lu}{2,}\b/gu; // Correspond aux mots avec au moins 2 lettres majuscules
     let match;
     while ((match = uppercasePattern.exec(text))) {
       const startPos = document.positionAt(match.index);
@@ -213,9 +213,9 @@ class DJVCSemanticTokensProvider
 
     // Add logic to identify and classify tokens based on the text
     // For example:
-    const punctuationRegex = /(\.|\#|\,|\:|\(|\))/g; // Inclure les parenthèses
+    const regex = /(\.|\#|\,|\:|\d)/g;
     let matchItem;
-    while ((matchItem = punctuationRegex.exec(text))) {
+    while ((matchItem = regex.exec(text))) {
       const start = matchItem.index;
       const length = matchItem[0].length;
       let tokenType = "";
@@ -227,29 +227,24 @@ class DJVCSemanticTokensProvider
         case ",":
           tokenType = "punctuation.comma.djvc";
           break;
-        case ":":
+        case "²:":
           tokenType = "punctuation.2pts.djvc";
           break;
         case "#":
           tokenType = "punctuation.apostrph.djvc";
           break;
-        case "(":
-        case ")":
+        case /\d/.test(matchItem[0]) ? matchItem[0] : null:
           tokenType = "punctuation.parenthesis.djvc";
           break;
-        default:
-          tokenType = "";
       }
 
-      if (tokenType) {
-        tokensBuilder.push(
-          document.positionAt(start).line,
-          document.positionAt(start).character,
-          length,
-          legend.tokenTypes.indexOf(tokenType),
-          legend.tokenModifiers.indexOf("declaration")
-        );
-      }
+      tokensBuilder.push(
+        document.positionAt(start).line,
+        document.positionAt(start).character,
+        length,
+        legend.tokenTypes.indexOf(tokenType),
+        legend.tokenModifiers.indexOf("declaration")
+      );
     }
 
     return tokensBuilder.build();
