@@ -126,19 +126,39 @@
     {
       "scope": "punctuation.definition.group.begin.djvc",
       "settings": {
-        "foreground": "#FF0000" // Color for (
+        "foreground": "#FF0000" // Rouge pour (
       }
     },
     {
       "scope": "punctuation.definition.group.end.djvc",
       "settings": {
-        "foreground": "#0000FF" // Color for )
+        "foreground": "#0000FF" // Bleu pour )
       }
     },
     {
       "scope": "meta.group.djvc",
       "settings": {
         "foreground": "#FFFF00" // Color for text inside parentheses
+      }
+    },
+    {
+      "scope": "string.text.inside.group.djvc",
+      "settings": {
+        "foreground": "#FFA500" // Orange pour le texte entre parenthèses
+      }
+    },
+    {
+      "scope": "markup.heading.marker.djvc",
+      "settings": {
+        "foreground": "#FF6B6B", // Rouge clair pour les #
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.heading.text.djvc",
+      "settings": {
+        "foreground": "#4CD7D0", // Bleu-vert pour le texte du titre
+        "fontStyle": "bold"
       }
     }
   ]

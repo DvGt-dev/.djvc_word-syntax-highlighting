@@ -23,7 +23,11 @@
     },
     {
       "name": "markup.heading.djvc",
-      "match": "^#{1,6}\\s.*$"
+      "match": "^(#{1,6})\\s+(.+)$",
+      "captures": {
+        "1": { "name": "markup.heading.marker.djvc" },
+        "2": { "name": "markup.heading.text.djvc" }
+      }
     },
     {
       "name": "markup.bold.djvc",
@@ -101,14 +105,16 @@
       ]
     },
     {
-      "name": "meta.parentheses.djvc",
+      "name": "string.text.inside.group.djvc",
       "begin": "\\(",
       "end": "\\)",
-      "patterns": [
-        {
-          "include": "$self"
-        }
-      ]
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.group.begin.djvc" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.group.end.djvc" }
+      },
+      "patterns": [{ "include": "$self" }]
     }
   ],
   "repository": {},
