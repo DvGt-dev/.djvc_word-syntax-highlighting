@@ -122,10 +122,12 @@
           "textMateRules": [
             {
               "scope": [
-                "source.djvc"
+                "source.djvc",
+                "text.djvc"
               ],
               "settings": {
-                "foreground": "#808080"  
+                "foreground": "#808080",
+                "fontStyle": ""
               }
             }
           ]
