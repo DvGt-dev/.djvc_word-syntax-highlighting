@@ -117,7 +117,19 @@
           }
         },
         "editor.semanticHighlighting.enabled": true,
-        "editor.wordWrap": "on"
+        "editor.wordWrap": "on",
+        "editor.tokenColorCustomizations": {
+          "textMateRules": [
+            {
+              "scope": [
+                "source.djvc"
+              ],
+              "settings": {
+                "foreground": "#808080"  
+              }
+            }
+          ]
+        }
       },
       "[*]": {
         "editor.semanticHighlighting.enabled": true,

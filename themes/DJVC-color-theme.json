@@ -2,7 +2,7 @@
   "name": "DJVC Theme",
   "type": "dark",
   "colors": {
-    "editor.foreground": "#A9A9A9" // Set text color to dark grey
+    "editor.foreground": "#808080"
   },
   "tokenColors": [
     {
@@ -93,7 +93,8 @@
       }
     },
     {
-      "scope": ["string.quoted.single.djvc", "string.quoted.double.djvc"],
+      // Removed "string.quoted.single.djvc" from the scope
+      "scope": "string.quoted.double.djvc",
       "settings": {
         "foreground": "#FFFF00" // Color for text between quotation marks
       }
@@ -102,6 +103,42 @@
       "scope": "meta.parentheses.djvc",
       "settings": {
         "foreground": "#FFA500" // Color for text between parentheses
+      }
+    },
+    {
+      "scope": "punctuation.definition.quote.begin.djvc",
+      "settings": {
+        "foreground": "#FF0000" // Color for «
+      }
+    },
+    {
+      "scope": "punctuation.definition.quote.end.djvc",
+      "settings": {
+        "foreground": "#0000FF" // Color for »
+      }
+    },
+    {
+      "scope": "string.quoted.double.french.djvc",
+      "settings": {
+        "foreground": "#FFFF00" // Color for text inside «»
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.begin.djvc",
+      "settings": {
+        "foreground": "#FF0000" // Color for (
+      }
+    },
+    {
+      "scope": "punctuation.definition.group.end.djvc",
+      "settings": {
+        "foreground": "#0000FF" // Color for )
+      }
+    },
+    {
+      "scope": "meta.group.djvc",
+      "settings": {
+        "foreground": "#FFFF00" // Color for text inside parentheses
       }
     }
   ]

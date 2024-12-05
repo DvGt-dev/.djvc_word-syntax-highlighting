@@ -65,13 +65,38 @@
       ]
     },
     {
-      "name": "string.quoted.single.djvc",
-      "begin": "'",
-      "end": "'",
+      "name": "punctuation.definition.quote.begin.djvc",
+      "match": "«"
+    },
+    {
+      "name": "punctuation.definition.quote.end.djvc",
+      "match": "»"
+    },
+    {
+      "begin": "«",
+      "end": "»",
+      "name": "string.quoted.double.french.djvc",
       "patterns": [
         {
-          "name": "constant.character.escape.djvc",
-          "match": "\\\\."
+          "include": "$self"
+        }
+      ]
+    },
+    {
+      "name": "punctuation.definition.group.begin.djvc",
+      "match": "\\("
+    },
+    {
+      "name": "punctuation.definition.group.end.djvc",
+      "match": "\\)"
+    },
+    {
+      "begin": "\\(",
+      "end": "\\)",
+      "name": "meta.group.djvc",
+      "patterns": [
+        {
+          "include": "$self"
         }
       ]
     },

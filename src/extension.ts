@@ -36,7 +36,6 @@ export function activate(context: vscode.ExtensionContext) {
       { open: "[", close: "]" },
       { open: "(", close: ")" },
       { open: '"', close: '"' },
-      { open: "'", close: "'" },
     ],
     wordPattern:
       /(-?\d*\.\d\w*)|([^\`\~\!\@\#\$\%\^\&\*\(\)\=\+\[\{\]\}\\\|\;\:\'\"\,\<\>\/\?\s]+)/g,
@@ -75,6 +74,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Remove the color provider registration
   // vscode.languages.registerColorProvider("djvc", new DJVCColorProvider());
 
+  /*
   // Force l'application des couleurs customisées
   const forceCustomColors = () => {
     const config = vscode.workspace.getConfiguration();
@@ -131,7 +131,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
   };
 
-  // Appliquer les couleurs au démarrage et lors des changements de thème
+  // Appliquer les couleurs au démarrage et lors des changements de th��me
   forceCustomColors();
   context.subscriptions.push(
     vscode.workspace.onDidChangeConfiguration((event) => {
@@ -140,6 +140,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
     })
   );
+  */
 }
 
 // Update the legend to include the correct token types
