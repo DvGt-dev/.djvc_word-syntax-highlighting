@@ -182,6 +182,7 @@ class DJVCSemanticTokensProvider
       { type: "markup.link.djvc", regex: /\[.*?\]\(.*?\)/g },
     ];
 
+    // Traiter les autres patterns en premier
     patterns.forEach(({ type, regex }) => {
       let match;
       while ((match = regex.exec(text))) {
@@ -196,8 +197,8 @@ class DJVCSemanticTokensProvider
       }
     });
 
-    // Add matching for uppercase words
-    const uppercasePattern = /\b[A-Z]+\b/g;
+    // Traiter les lettres majuscules après
+    const uppercasePattern = /\p{Lu}+/gu; // 'u' pour Unicode
     let match;
     while ((match = uppercasePattern.exec(text))) {
       const startPos = document.positionAt(match.index);
@@ -206,7 +207,7 @@ class DJVCSemanticTokensProvider
         startPos.character,
         match[0].length,
         legend.tokenTypes.indexOf("entity.name.uppercase.djvc"),
-        0 // No modifiers
+        0 // Pas de modificateurs
       );
     }
 

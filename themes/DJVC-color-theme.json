@@ -3,13 +3,40 @@
   "type": "dark",
   "colors": {
     "editor.foreground": "#808080",
-    "editor.background": "#1E1E1E" // Ajouter cette ligne pour être sûr
+    "editor.background": "#1E1E1E"
   },
   "tokenColors": [
     {
-      "scope": "source.djvc", // Ajouter cette règle en premier
+      "scope": ["source.djvc"],
+      "settings": {
+        "foreground": "#808080",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "entity.name.uppercase.djvc",
+      "settings": {
+        "foreground": "#FFA500",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["source.djvc", "text.djvc", "meta.embedded.block.djvc"],
+      "settings": {
+        "foreground": "#808080",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "meta.paragraph.djvc",
       "settings": {
         "foreground": "#808080"
+      }
+    },
+    {
+      "scope": "source.djvc",
+      "settings": {
+        "foreground": "#695757"
       }
     },
     {
@@ -39,7 +66,7 @@
     {
       "scope": "punctuation.parenthesis.djvc",
       "settings": {
-        "foreground": "#00b9ec"
+        "foreground": "#62c2dc"
       }
     },
     {
@@ -51,7 +78,7 @@
         "markup.heading.atx.markdown"
       ],
       "settings": {
-        "foreground": "#569CD6",
+        "foreground": "#467fae",
         "fontStyle": "bold"
       }
     },
@@ -62,14 +89,7 @@
         "entity.name.section.djvc"
       ],
       "settings": {
-        "foreground": "#569CD6",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "entity.name.uppercase.djvc",
-      "settings": {
-        "foreground": "#FFA500",
+        "foreground": "#56cdd6",
         "fontStyle": "bold"
       }
     },
@@ -100,71 +120,70 @@
       }
     },
     {
-      // Removed "string.quoted.single.djvc" from the scope
       "scope": "string.quoted.double.djvc",
       "settings": {
-        "foreground": "#FFFF00" // Color for text between quotation marks
+        "foreground": "#FFFF00"
       }
     },
     {
       "scope": "meta.parentheses.djvc",
       "settings": {
-        "foreground": "#FFA500" // Color for text between parentheses
+        "foreground": "#FFA500"
       }
     },
     {
       "scope": "punctuation.definition.quote.begin.djvc",
       "settings": {
-        "foreground": "#FF0000" // Color for «
+        "foreground": "#FF0000"
       }
     },
     {
       "scope": "punctuation.definition.quote.end.djvc",
       "settings": {
-        "foreground": "#0000FF" // Color for »
+        "foreground": "#3a8bc1"
       }
     },
     {
       "scope": "string.quoted.double.french.djvc",
       "settings": {
-        "foreground": "#FFFF00" // Color for text inside «»
+        "foreground": "#FFD700"
       }
     },
     {
       "scope": "punctuation.definition.group.begin.djvc",
       "settings": {
-        "foreground": "#FF0000" // Rouge pour (
+        "foreground": "#FF0000"
       }
     },
     {
       "scope": "punctuation.definition.group.end.djvc",
       "settings": {
-        "foreground": "#0000FF" // Bleu pour )
+        "foreground": "#8858b5"
       }
     },
     {
       "scope": "meta.group.djvc",
       "settings": {
-        "foreground": "#FFFF00" // Color for text inside parentheses
+        "foreground": "#999920"
       }
     },
     {
       "scope": "string.text.inside.group.djvc",
       "settings": {
-        "foreground": "#FFA500" // Orange pour le texte entre parenthèses
+        "foreground": "#FFA500"
       }
     },
     {
       "scope": "markup.heading.marker.djvc",
       "settings": {
-        "foreground": "#FF6B6B", // Rouge clair pour les #
+        "foreground": "#FF6B6B",
         "fontStyle": "bold"
       }
     },
     {
       "scope": "markup.heading.text.djvc",
       "settings": {
-        "foreground": "#4CD7D0", // Bleu-vert pour le texte du titre
+        "foreground": "#4CD7D0",
         "fontStyle": "bold"
       }
     }
