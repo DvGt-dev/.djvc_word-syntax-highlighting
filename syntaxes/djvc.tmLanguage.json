@@ -48,8 +48,8 @@
     },
     {
       "name": "string.quoted.double.djvc",
-      "begin": "\"",
-      "end": "\"",
+      "begin": "«",
+      "end": "»",
       "patterns": [
         {
           "name": "constant.character.escape.djvc",
