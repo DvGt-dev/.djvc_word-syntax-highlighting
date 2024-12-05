@@ -48,12 +48,29 @@
     },
     {
       "name": "string.quoted.double.djvc",
-      "begin": "«",
-      "end": "»",
+      "begin": "\"",
+      "end": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.djvc" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.djvc" }
+      },
       "patterns": [
         {
           "name": "constant.character.escape.djvc",
-          "match": "(\\\\.)(?=[^»]*«)"
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.double.djvc",
+      "begin": "(?<=«)",
+      "end": "(?=»)",
+      "patterns": [
+        {
+          "name": "constant.character.escape.djvc",
+          "match": "\\\\."
         }
       ]
     },
