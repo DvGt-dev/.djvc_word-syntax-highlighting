@@ -2,8 +2,12 @@
   "scopeName": "source.djvc",
   "patterns": [
     {
-      "name": "entity.name.uppercase.djvc",
-      "match": "\\b\\p{Lu}+\\b"
+      "name": "markup.heading.djvc",
+      "match": "^(#{1,6})\\s+(.+)$",
+      "captures": {
+        "1": { "name": "markup.heading.marker.djvc" },
+        "2": { "name": "markup.heading.text.djvc" }
+      }
     },
     {
       "name": "punctuation.period.djvc",
@@ -25,14 +29,7 @@
       "name": "punctuation.parenthesis.djvc",
       "match": "\\d"
     },
-    {
-      "name": "markup.heading.djvc",
-      "match": "^(#{1,6})\\s+(.+)$",
-      "captures": {
-        "1": { "name": "markup.heading.marker.djvc" },
-        "2": { "name": "markup.heading.text.djvc" }
-      }
-    },
+
     {
       "name": "markup.bold.djvc",
       "match": "\\*\\*.*?\\*\\*"
@@ -82,8 +79,8 @@
       "name": "string.quoted.double.french.djvc",
       "patterns": [
         {
-          "name": "constant.character.escape.djvc",
-          "match": "\\\\."
+          "name": "string.inner.french.djvc",
+          "match": "[^«»]+"
         }
       ]
     },
@@ -116,6 +113,11 @@
         "0": { "name": "punctuation.definition.group.end.djvc" }
       },
       "patterns": [{ "include": "$self" }]
+    },
+
+    {
+      "name": "entity.name.uppercase.djvc",
+      "match": "\\b\\p{Lu}+\\b"
     }
   ],
   "repository": {},

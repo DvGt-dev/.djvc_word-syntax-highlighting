@@ -7,6 +7,25 @@
   },
   "tokenColors": [
     {
+      "scope": "source.djvc",
+      "settings": {
+        "foreground": "#888095"
+      }
+    },
+    // {
+    //   "scope": [
+    //     "markup.heading",
+    //     "markup.heading.markdown",
+    //     "markup.heading.setext.1.markdown",
+    //     "markup.heading.setext.2.markdown",
+    //     "markup.heading.atx.markdown"
+    //   ],
+    //   "settings": {
+    //     "foreground": "#467fae",
+    //     "fontStyle": "bold"
+    //   }
+    // },
+    {
       "scope": ["source.djvc"],
       "settings": {
         "foreground": "#808080",
@@ -31,12 +50,6 @@
       "scope": "meta.paragraph.djvc",
       "settings": {
         "foreground": "#808080"
-      }
-    },
-    {
-      "scope": "source.djvc",
-      "settings": {
-        "foreground": "#695757"
       }
     },
     {
@@ -70,16 +83,15 @@
       }
     },
     {
-      "scope": [
-        "markup.heading",
-        "markup.heading.markdown",
-        "markup.heading.setext.1.markdown",
-        "markup.heading.setext.2.markdown",
-        "markup.heading.atx.markdown"
-      ],
+      "scope": "meta.group.djvc",
       "settings": {
-        "foreground": "#467fae",
-        "fontStyle": "bold"
+        "foreground": "#62c2dc"
+      }
+    },
+    {
+      "scope": "meta.group.content.djvc",
+      "settings": {
+        "foreground": "#FFFFFF"
       }
     },
     {
