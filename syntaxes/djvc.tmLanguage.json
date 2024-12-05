@@ -27,7 +27,7 @@
     },
     {
       "name": "punctuation.parenthesis.djvc",
-      "match": "\\d"
+      "match": "[()]"
     },
 
     {
@@ -53,7 +53,7 @@
       "patterns": [
         {
           "name": "constant.character.escape.djvc",
-          "match": "\\\\."
+          "match": "(\\\\.)(?=[^»]*«)"
         }
       ]
     },
@@ -117,7 +117,7 @@
 
     {
       "name": "entity.name.uppercase.djvc",
-      "match": "\\b\\p{Lu}+\\b"
+      "match": "\\b[A-Z][A-Z0-9_]*\\b"
     }
   ],
   "repository": {},

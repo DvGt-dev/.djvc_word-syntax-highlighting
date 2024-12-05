@@ -198,7 +198,7 @@ class DJVCSemanticTokensProvider
     });
 
     // Traiter les lettres majuscules après
-    const uppercasePattern = /\b\p{Lu}{2,}\b/gu; // Correspond aux mots avec au moins 2 lettres majuscules
+    const uppercasePattern = /\b[A-Z][A-Z0-9_]*\b/g; // Correspond aux mots avec au moins une majuscule
     let match;
     while ((match = uppercasePattern.exec(text))) {
       const startPos = document.positionAt(match.index);
@@ -213,9 +213,9 @@ class DJVCSemanticTokensProvider
 
     // Add logic to identify and classify tokens based on the text
     // For example:
-    const regex = /(\.|\#|\,|\:|\d)/g;
+    const punctuationRegex = /(\.|\#|\,|\:|\(|\))/g; // Inclure les parenthèses
     let matchItem;
-    while ((matchItem = regex.exec(text))) {
+    while ((matchItem = punctuationRegex.exec(text))) {
       const start = matchItem.index;
       const length = matchItem[0].length;
       let tokenType = "";
@@ -227,24 +227,29 @@ class DJVCSemanticTokensProvider
         case ",":
           tokenType = "punctuation.comma.djvc";
           break;
-        case "²:":
+        case ":":
           tokenType = "punctuation.2pts.djvc";
           break;
         case "#":
           tokenType = "punctuation.apostrph.djvc";
           break;
-        case /\d/.test(matchItem[0]) ? matchItem[0] : null:
+        case "(":
+        case ")":
           tokenType = "punctuation.parenthesis.djvc";
           break;
+        default:
+          tokenType = "";
       }
 
-      tokensBuilder.push(
-        document.positionAt(start).line,
-        document.positionAt(start).character,
-        length,
-        legend.tokenTypes.indexOf(tokenType),
-        legend.tokenModifiers.indexOf("declaration")
-      );
+      if (tokenType) {
+        tokensBuilder.push(
+          document.positionAt(start).line,
+          document.positionAt(start).character,
+          length,
+          legend.tokenTypes.indexOf(tokenType),
+          legend.tokenModifiers.indexOf("declaration")
+        );
+      }
     }
 
     return tokensBuilder.build();

@@ -198,6 +198,12 @@
         "foreground": "#4CD7D0",
         "fontStyle": "bold"
       }
+    },
+    {
+      "scope": "string.inner.french.djvc",
+      "settings": {
+        "foreground": "#482e2e"
+      }
     }
   ]
 }
