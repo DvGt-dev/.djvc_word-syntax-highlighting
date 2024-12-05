@@ -198,7 +198,7 @@ class DJVCSemanticTokensProvider
     });
 
     // Traiter les lettres majuscules après
-    const uppercasePattern = /\b[A-Z][A-Z0-9_]*\b/g; // Correspond aux mots avec au moins une majuscule
+    const uppercasePattern = /[A-Z]/g; // Correspond à chaque lettre majuscule
     let match;
     while ((match = uppercasePattern.exec(text))) {
       const startPos = document.positionAt(match.index);

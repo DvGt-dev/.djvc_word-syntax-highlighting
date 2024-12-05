@@ -117,7 +117,7 @@
 
     {
       "name": "entity.name.uppercase.djvc",
-      "match": "\\b[A-Z][A-Z0-9_]*\\b"
+      "match": "[A-Z]"
     }
   ],
   "repository": {},
