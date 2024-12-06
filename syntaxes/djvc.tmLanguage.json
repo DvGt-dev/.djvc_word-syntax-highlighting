@@ -10,6 +10,40 @@
       }
     },
     {
+      "name": "string.quoted.any.djvc",
+      "patterns": [
+        {
+          "name": "string.quoted.double.djvc",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.djvc" }
+          },
+          "contentName": "string.quoted.content.djvc"
+        },
+        {
+          "name": "string.quoted.parentheses.djvc",
+          "begin": "\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.group.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.group.end.djvc" }
+          },
+          "contentName": "string.parentheses.content.djvc",
+          "patterns": [
+            {
+              "include": "#numbers"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "punctuation.period.djvc",
       "match": "\\."
     },
@@ -24,10 +58,6 @@
     {
       "name": "punctuation.apostrph.djvc",
       "match": "\\#"
-    },
-    {
-      "name": "punctuation.parenthesis.djvc",
-      "match": "[()]"
     },
     {
       "name": "markup.bold.djvc",
@@ -45,49 +75,6 @@
       "name": "markup.link.djvc",
       "match": "\\[.*?\\]\\(.*?\\)"
     },
-
-    {
-      "name": "string.quoted.any.djvc",
-      "patterns": [
-        {
-          "name": "string.quoted.double.djvc",
-          "begin": "\"",
-          "end": "\"",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.string.begin.djvc" }
-          },
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.string.end.djvc" }
-          },
-          "contentName": "string.quoted.content.djvc"
-        },
-        {
-          "name": "string.quoted.french.djvc",
-          "begin": "«",
-          "end": "»",
-          "beginCaptures": {
-            "0": { "name": "punctuation.french.quote.begin.djvc" }
-          },
-          "endCaptures": {
-            "0": { "name": "punctuation.french.quote.end.djvc" }
-          },
-          "contentName": "string.french.quote.content.djvc"
-        },
-        {
-          "name": "string.quoted.parentheses.djvc",
-          "begin": "\\(",
-          "end": "\\)",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.group.begin.djvc" }
-          },
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.group.end.djvc" }
-          },
-          "contentName": "string.parentheses.content.djvc"
-        }
-      ]
-    },
-
     {
       "name": "markup.heading.title.djvc",
       "match": "^(#{1,6})\\s+(.*)$",
@@ -102,21 +89,22 @@
     },
     {
       "name": "entity.name.number.djvc",
-      "match": "\\d+"
-    },
-    {
-      "name": "string.quoted.double.djvc",
-      "begin": "\"",
-      "end": "\"",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.begin.djvc" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.string.end.djvc" }
-      },
-      "contentName": "string.quoted.content.djvc"
+      "match": "\\d+",
+      "captures": {
+        "0": { "name": "entity.name.number.djvc" }
+      }
     }
   ],
+  "repository": {
+    "numbers": {
+      "patterns": [
+        {
+          "name": "entity.name.number.djvc",
+          "match": "\\d+"
+        }
+      ]
+    }
+  },
   "fileTypes": ["djvc"],
   "name": "DJVC"
 }
