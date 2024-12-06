@@ -22,7 +22,12 @@
           "endCaptures": {
             "0": { "name": "punctuation.definition.string.end.djvc" }
           },
-          "contentName": "string.quoted.content.djvc"
+          "contentName": "string.quoted.content.djvc",
+          "patterns": [
+            {
+              "include": "#punctuation"
+            }
+          ]
         },
         {
           "name": "string.quoted.parentheses.djvc",
@@ -37,7 +42,7 @@
           "contentName": "string.parentheses.content.djvc",
           "patterns": [
             {
-              "include": "#numbers"
+              "include": "#punctuation"
             }
           ]
         }
@@ -81,7 +86,12 @@
       "captures": {
         "1": { "name": "punctuation.definition.heading.djvc" },
         "2": { "name": "entity.name.section.djvc" }
-      }
+      },
+      "patterns": [
+        {
+          "include": "#punctuation"
+        }
+      ]
     },
     {
       "name": "entity.name.uppercase.djvc",
@@ -101,6 +111,26 @@
         {
           "name": "entity.name.number.djvc",
           "match": "\\d+"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.period.djvc",
+          "match": "\\."
+        },
+        {
+          "name": "punctuation.comma.djvc",
+          "match": ","
+        },
+        {
+          "name": "punctuation.2pts.djvc",
+          "match": ":"
+        },
+        {
+          "name": "punctuation.apostrph.djvc",
+          "match": ";"
         }
       ]
     }
