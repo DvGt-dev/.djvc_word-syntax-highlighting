@@ -15,60 +15,70 @@
         "meta.paragraph.djvc"
       ],
       "settings": {
-        "foreground": "#808080",
+        "foreground": "#808080", // couleur générale
         "fontStyle": ""
       }
     },
 
     // Quotes styling
     {
-      "scope": [
-        "punctuation.definition.string.begin.djvc",
-        "punctuation.french.quote.begin.djvc"
-      ],
+      "scope": "punctuation.definition.string.begin.djvc",
       "settings": {
-        "foreground": "#FF0000"
+        "foreground": "#cbb9b9"
       }
     },
     {
-      "scope": [
-        "punctuation.definition.string.end.djvc",
-        "punctuation.french.quote.end.djvc"
-      ],
+      "scope": "punctuation.definition.string.end.djvc",
       "settings": {
-        "foreground": "#00FF00"
+        "foreground": "#FFD700"
       }
     },
     {
-      "scope": [
-        "string.quoted.content.djvc",
-        "string.french.quote.content.djvc"
-      ],
+      "scope": "string.quoted.content.djvc",
       "settings": {
         "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.french.quote.begin.djvc",
+      "settings": {
+        "foreground": "#FFFF00"
+      }
+    },
+    {
+      "scope": "punctuation.french.quote.end.djvc",
+      "settings": {
+        "foreground": "#FF69B4"
+      }
+    },
+    {
+      "scope": "string.french.quote.content.djvc",
+      "settings": {
+        "foreground": "#FF00FF"
       }
     },
 
     // Parentheses styling
     {
-      "scope": "punctuation.parentheses.begin.djvc",
+      "scope": "punctuation.definition.group.begin.djvc",
       "settings": {
         "foreground": "#FF00FF"
       }
     },
     {
-      "scope": "punctuation.parentheses.end.djvc",
+      "scope": "punctuation.definition.group.end.djvc",
       "settings": {
-        "foreground": "#00FFFF"
+        "foreground": "#b78787"
       }
     },
     {
       "scope": "string.parentheses.content.djvc",
       "settings": {
-        "foreground": "#888888"
+        "foreground": "#955e5e"
       }
     },
 
+    // Other elements
     {
       "scope": "entity.name.uppercase.djvc",
       "settings": {
@@ -77,45 +87,15 @@
       }
     },
     {
-      "scope": "punctuation.period.djvc",
+      "scope": [
+        "punctuation.period.djvc",
+        "punctuation.comma.djvc",
+        "punctuation.2pts.djvc",
+        "punctuation.apostrph.djvc"
+      ],
       "settings": {
-        "foreground": "#FF0000"
-      }
-    },
-    {
-      "scope": "punctuation.comma.djvc",
-      "settings": {
-        "foreground": "#00FF00"
-      }
-    },
-    {
-      "scope": "punctuation.2pts.djvc",
-      "settings": {
-        "foreground": "#d94eff"
-      }
-    },
-    {
-      "scope": "punctuation.apostrph.djvc",
-      "settings": {
-        "foreground": "#b301ff"
-      }
-    },
-    {
-      "scope": "punctuation.parenthesis.djvc",
-      "settings": {
-        "foreground": "#62c2dc"
-      }
-    },
-    {
-      "scope": "meta.group.djvc",
-      "settings": {
-        "foreground": "#62c2dc"
-      }
-    },
-    {
-      "scope": "meta.group.content.djvc",
-      "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#FF0000",
+        "fontStyle": "bold"
       }
     },
     {
@@ -156,83 +136,9 @@
       }
     },
     {
-      "scope": "string.quoted.double.djvc",
+      "scope": "entity.name.number.djvc",
       "settings": {
-        "foreground": "#FFFF00"
-      }
-    },
-    {
-      "scope": "meta.parentheses.djvc",
-      "settings": {
-        "foreground": "#FFA500"
-      }
-    },
-    {
-      "scope": "punctuation.definition.quote.begin.djvc",
-      "settings": {
-        "foreground": "#FF0000"
-      }
-    },
-    {
-      "scope": "punctuation.definition.quote.end.djvc",
-      "settings": {
-        "foreground": "#3a8bc1"
-      }
-    },
-    {
-      "scope": "string.quoted.double.french.djvc",
-      "settings": {
-        "foreground": "#FFD700"
-      }
-    },
-    {
-      "scope": "punctuation.definition.group.begin.djvc",
-      "settings": {
-        "foreground": "#FF0000"
-      }
-    },
-    {
-      "scope": "punctuation.definition.group.end.djvc",
-      "settings": {
-        "foreground": "#8858b5"
-      }
-    },
-    {
-      "scope": "meta.group.djvc",
-      "settings": {
-        "foreground": "#999920"
-      }
-    },
-    {
-      "scope": "string.text.inside.group.djvc",
-      "settings": {
-        "foreground": "#FFA500"
-      }
-    },
-    {
-      "scope": "markup.heading.marker.djvc",
-      "settings": {
-        "foreground": "#FF6B6B",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "markup.heading.text.djvc",
-      "settings": {
-        "foreground": "#4CD7D0",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "string.inner.french.djvc",
-      "settings": {
-        "foreground": "#482e2e"
-      }
-    },
-    {
-      "scope": "string.quoted.content.djvc",
-      "settings": {
-        "foreground": "#FFFF00"
+        "foreground": "#7eba2f"
       }
     }
   ]

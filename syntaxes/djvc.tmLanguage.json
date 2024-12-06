@@ -45,6 +45,7 @@
       "name": "markup.link.djvc",
       "match": "\\[.*?\\]\\(.*?\\)"
     },
+
     {
       "name": "string.quoted.any.djvc",
       "patterns": [
@@ -71,22 +72,22 @@
             "0": { "name": "punctuation.french.quote.end.djvc" }
           },
           "contentName": "string.french.quote.content.djvc"
+        },
+        {
+          "name": "string.quoted.parentheses.djvc",
+          "begin": "\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.group.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.group.end.djvc" }
+          },
+          "contentName": "string.parentheses.content.djvc"
         }
       ]
     },
-    {
-      "name": "meta.group.djvc",
-      "begin": "\\(",
-      "end": "\\)",
-      "beginCaptures": {
-        "0": { "name": "punctuation.parentheses.begin.djvc" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.parentheses.end.djvc" }
-      },
-      "contentName": "string.parentheses.content.djvc",
-      "patterns": [{ "include": "$self" }]
-    },
+
     {
       "name": "markup.heading.title.djvc",
       "match": "^(#{1,6})\\s+(.*)$",
@@ -96,39 +97,26 @@
       }
     },
     {
-      "name": "punctuation.definition.quote.begin.djvc",
-      "match": "«"
-    },
-    {
-      "name": "punctuation.definition.quote.end.djvc",
-      "match": "»"
-    },
-    {
-      "name": "punctuation.definition.group.begin.djvc",
-      "match": "\\("
-    },
-    {
-      "name": "punctuation.definition.group.end.djvc",
-      "match": "\\)"
-    },
-    {
-      "name": "string.text.inside.group.djvc",
-      "begin": "\\(",
-      "end": "\\)",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.group.begin.djvc" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.group.end.djvc" }
-      },
-      "patterns": [{ "include": "$self" }]
-    },
-    {
       "name": "entity.name.uppercase.djvc",
       "match": "[A-Z]"
+    },
+    {
+      "name": "entity.name.number.djvc",
+      "match": "\\d+"
+    },
+    {
+      "name": "string.quoted.double.djvc",
+      "begin": "\"",
+      "end": "\"",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.string.begin.djvc" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.string.end.djvc" }
+      },
+      "contentName": "string.quoted.content.djvc"
     }
   ],
-  "repository": {},
   "fileTypes": ["djvc"],
   "name": "DJVC"
 }

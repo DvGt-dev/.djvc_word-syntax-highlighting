@@ -27,8 +27,7 @@
         ],
         "extensions": [
           ".djvc"
-        ],
-        "configuration": "./language-configuration.json"
+        ]
       }
     ],
     "grammars": [
@@ -65,74 +64,12 @@
       {
         "id": "punctuation_digit",
         "description": "A digit in DJVC"
-      },
-      {
-        "id": "markup_heading",
-        "description": "A heading in Markdown"
-      },
-      {
-        "id": "markup_bold",
-        "description": "Bold text in Markdown"
-      },
-      {
-        "id": "markup_italic",
-        "description": "Italic text in Markdown"
-      },
-      {
-        "id": "markup_list",
-        "description": "List item in Markdown"
-      },
-      {
-        "id": "markup_link",
-        "description": "Link in Markdown"
-      }
-    ],
-    "semanticTokenModifiers": [
-      {
-        "id": "declaration",
-        "description": "Style declaration"
-      },
-      {
-        "id": "documentation",
-        "description": "Documentation text"
       }
     ],
     "configurationDefaults": {
       "[djvc]": {
-        "editor.semanticTokenColorCustomizations": {
-          "[Deep Dark Pro]": {
-            "enabled": true,
-            "rules": {
-              "punctuation_period": "#FF0000",
-              "punctuation_comma": "#00FF00",
-              "punctuation_colon": "#d94eff",
-              "punctuation_hash": "#b301ff",
-              "punctuation_digit": "#00b9ec",
-              "markup_heading": "#569CD6",
-              "markup_bold": "#569CD6",
-              "markup_italic": "#CE9178",
-              "markup_list": "#6796E6",
-              "markup_link": "#4EC9B0"
-            }
-          }
-        },
         "editor.semanticHighlighting.enabled": true,
-        "editor.wordWrap": "on",
-        "editor.tokenColorCustomizations": {
-          "textMateRules": [
-            {
-              "scope": [
-                "source.djvc",
-                "text.djvc",
-                "meta.paragraph.djvc"
-              ],
-              "settings": {
-                "foreground": "#808080",
-                "fontStyle": ""
-              }
-            }
-          ]
-        }
+        "editor.wordWrap": "on"
       }
     }
   },

@@ -6,18 +6,21 @@
   "brackets": [
     ["{", "}"],
     ["[", "]"],
-    ["(", ")"]
+    ["(", ")"],
+    ["«", "»"] // Ajout des guillemets français
   ],
   "autoClosingPairs": [
     { "open": "{", "close": "}" },
     { "open": "[", "close": "]" },
     { "open": "(", "close": ")" },
-    { "open": "\"", "close": "\"" }
+    { "open": "\"", "close": "\"" },
+    { "open": "«", "close": "»" } // Ajout des guillemets français
   ],
   "surroundingPairs": [
     { "open": "{", "close": "}" },
     { "open": "[", "close": "]" },
     { "open": "(", "close": ")" },
-    { "open": "\"", "close": "\"" }
+    { "open": "\"", "close": "\"" },
+    { "open": "«", "close": "»" } // Ajout des guillemets français
   ]
 }
