@@ -13,6 +13,9 @@
           "include": "#punctuation"
         },
         {
+          "include": "#parentheses"
+        },
+        {
           "include": "#numbers"
         }
       ]
