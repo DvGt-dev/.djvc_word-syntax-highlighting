@@ -8,9 +8,16 @@
         "1": { "name": "markup.heading.marker.djvc" },
         "2": { "name": "markup.heading.text.djvc" }
       },
+
       "patterns": [
         {
-          "include": "#quotes"
+          "include": "#punctuation"
+        },
+        {
+          "include": "#parentheses"
+        },
+        {
+          "include": "#numbers"
         }
       ]
     },
@@ -30,7 +37,13 @@
           "contentName": "string.quoted.content.djvc",
           "patterns": [
             {
+              "include": "#punctuation"
+            },
+            {
               "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         },
@@ -47,7 +60,33 @@
           "contentName": "string.french.quote.content.djvc",
           "patterns": [
             {
+              "include": "#punctuation"
+            },
+            {
               "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.parentheses.djvc",
+          "begin": "\\(",
+          "end": "\\)",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.group.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.group.end.djvc" }
+          },
+          "contentName": "string.parentheses.content.djvc",
+          "patterns": [
+            {
+              "include": "#punctuation"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         }
@@ -95,6 +134,15 @@
       "patterns": [
         {
           "include": "#punctuation"
+        },
+        {
+          "include": "#parentheses"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#quotes"
         }
       ]
     },
@@ -148,17 +196,6 @@
         {
           "name": "punctuation.definition.group.end.djvc",
           "match": "\\)"
-        },
-        {
-          "name": "string.parentheses.content.djvc",
-          "patterns": [
-            {
-              "include": "#numbers"
-            },
-            {
-              "include": "#punctuation"
-            }
-          ]
         }
       ]
     },
@@ -178,6 +215,9 @@
           "patterns": [
             {
               "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         },
@@ -195,6 +235,9 @@
           "patterns": [
             {
               "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         }
