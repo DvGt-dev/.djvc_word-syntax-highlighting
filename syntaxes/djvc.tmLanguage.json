@@ -7,7 +7,15 @@
       "captures": {
         "1": { "name": "markup.heading.marker.djvc" },
         "2": { "name": "markup.heading.text.djvc" }
-      }
+      },
+      "patterns": [
+        {
+          "include": "#punctuation"
+        },
+        {
+          "include": "#numbers"
+        }
+      ]
     },
     {
       "name": "string.quoted.any.djvc",
@@ -26,6 +34,35 @@
           "patterns": [
             {
               "include": "#punctuation"
+            },
+            {
+              "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.french.djvc",
+          "begin": "«",
+          "end": "»",
+          "beginCaptures": {
+            "0": { "name": "punctuation.french.quote.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.french.quote.end.djvc" }
+          },
+          "contentName": "string.french.quote.content.djvc",
+          "patterns": [
+            {
+              "include": "#punctuation"
+            },
+            {
+              "include": "#parentheses"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         },
@@ -43,6 +80,9 @@
           "patterns": [
             {
               "include": "#punctuation"
+            },
+            {
+              "include": "#numbers"
             }
           ]
         }
@@ -131,6 +171,18 @@
         {
           "name": "punctuation.apostrph.djvc",
           "match": ";"
+        }
+      ]
+    },
+    "parentheses": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.group.begin.djvc",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.definition.group.end.djvc",
+          "match": "\\)"
         }
       ]
     }
