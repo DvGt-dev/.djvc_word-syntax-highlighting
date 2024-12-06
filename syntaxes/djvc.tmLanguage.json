@@ -10,13 +10,7 @@
       },
       "patterns": [
         {
-          "include": "#punctuation"
-        },
-        {
-          "include": "#parentheses"
-        },
-        {
-          "include": "#numbers"
+          "include": "#quotes"
         }
       ]
     },
@@ -36,13 +30,7 @@
           "contentName": "string.quoted.content.djvc",
           "patterns": [
             {
-              "include": "#punctuation"
-            },
-            {
               "include": "#parentheses"
-            },
-            {
-              "include": "#numbers"
             }
           ]
         },
@@ -59,33 +47,7 @@
           "contentName": "string.french.quote.content.djvc",
           "patterns": [
             {
-              "include": "#punctuation"
-            },
-            {
               "include": "#parentheses"
-            },
-            {
-              "include": "#numbers"
-            }
-          ]
-        },
-        {
-          "name": "string.quoted.parentheses.djvc",
-          "begin": "\\(",
-          "end": "\\)",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.group.begin.djvc" }
-          },
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.group.end.djvc" }
-          },
-          "contentName": "string.parentheses.content.djvc",
-          "patterns": [
-            {
-              "include": "#punctuation"
-            },
-            {
-              "include": "#numbers"
             }
           ]
         }
@@ -186,6 +148,55 @@
         {
           "name": "punctuation.definition.group.end.djvc",
           "match": "\\)"
+        },
+        {
+          "name": "string.parentheses.content.djvc",
+          "patterns": [
+            {
+              "include": "#numbers"
+            },
+            {
+              "include": "#punctuation"
+            }
+          ]
+        }
+      ]
+    },
+    "quotes": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.djvc",
+          "begin": "\"",
+          "end": "\"",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.string.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.string.end.djvc" }
+          },
+          "contentName": "string.quoted.content.djvc",
+          "patterns": [
+            {
+              "include": "#parentheses"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.french.djvc",
+          "begin": "«",
+          "end": "»",
+          "beginCaptures": {
+            "0": { "name": "punctuation.french.quote.begin.djvc" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.french.quote.end.djvc" }
+          },
+          "contentName": "string.french.quote.content.djvc",
+          "patterns": [
+            {
+              "include": "#parentheses"
+            }
+          ]
         }
       ]
     }
